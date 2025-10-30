@@ -3,231 +3,410 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>ELT TikTok Live Report - 双语日报</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>ELT TikTok LIVE 双语复盘 / Báo cáo song ngữ</title>
 <style>
-  body{
-    font-family: -apple-system,BlinkMacSystemFont,"Inter","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
-    color:#0f172a;
-    background:#f8fafc;
-    line-height:1.55;
-    margin:0;
-    padding:24px;
+:root{
+  --ink:#0f172a;
+  --sub:#475569;
+  --bg:#0f172a;
+  --panel:#ffffff;
+  --border:#e2e8f0;
+  --line:#f1f5f9;
+  --ok:#16a34a;
+  --hi:#2563eb;
+  --radius-xl:20px;
+  --radius-md:12px;
+  --radius-sm:6px;
+  --pad-lg:24px;
+  --pad-md:16px;
+  --pad-sm:10px;
+  --font-main:-apple-system,BlinkMacSystemFont,"Inter","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+}
+*{box-sizing:border-box;-webkit-font-smoothing:antialiased}
+body{
+  margin:0;
+  background:radial-gradient(circle at 20% 20%,#1e293b 0%,#0f172a 60%);
+  color:var(--ink);
+  font-family:var(--font-main);
+  line-height:1.55;
+  padding:var(--pad-md);
+}
+.app-shell{
+  max-width:1200px;
+  margin:0 auto;
+  background:var(--panel);
+  border-radius:var(--radius-xl);
+  border:1px solid rgba(255,255,255,0.05);
+  box-shadow:0 30px 80px rgba(0,0,0,.45);
+  overflow:hidden;
+  display:grid;
+  grid-template-columns:260px 1fr;
+  min-height:calc(100vh - 32px);
+}
+@media(max-width:820px){
+  .app-shell{
+    grid-template-columns:1fr;
+    min-height:auto;
   }
-  .wrap{
-    max-width:1000px;
-    margin:0 auto;
-    background:#fff;
-    border:1px solid #e2e8f0;
-    border-radius:16px;
-    padding:24px 28px 32px;
+}
+/* sidebar */
+.sidebar{
+  background:linear-gradient(160deg,#1e293b 0%,#0f172a 60%);
+  color:#f8fafc;
+  padding:var(--pad-lg) var(--pad-md);
+  display:flex;
+  flex-direction:column;
+  gap:var(--pad-lg);
+}
+@media(max-width:820px){
+  .sidebar{
+    border-bottom:1px solid rgba(255,255,255,.08);
+    border-radius:var(--radius-xl) var(--radius-xl) 0 0;
   }
-  h1{font-size:20px;margin:0 0 6px 0;color:#0f172a;line-height:1.4;}
-  h2{font-size:17px;margin:20px 0 10px 0;color:#111827;line-height:1.4;}
-  p.lead{color:#475569;font-size:14px;margin:0 0 16px 0;line-height:1.5;}
-  table{
-    width:100%;
-    border-collapse:collapse;
-    font-size:14px;
-    margin:12px 0 20px;
+}
+.brand-block h1{
+  font-size:16px;
+  font-weight:600;
+  color:#fff;
+  margin:0 0 4px 0;
+  line-height:1.4;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px;
+}
+.badge{
+  background:#ecfdf5;
+  color:#065f46;
+  border:1px solid #6ee7b7;
+  border-radius:999px;
+  font-size:10px;
+  font-weight:500;
+  padding:2px 6px;
+  line-height:1.4;
+}
+.brand-block p{
+  margin:0;
+  font-size:12px;
+  line-height:1.5;
+  color:#cbd5e1;
+}
+.nav-block{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+.nav-item{
+  background:rgba(148,163,184,.08);
+  color:#e2e8f0;
+  border:1px solid rgba(226,232,240,.1);
+  border-radius:var(--radius-md);
+  padding:10px 12px;
+  font-size:13px;
+  line-height:1.4;
+  cursor:pointer;
+}
+.nav-item.active{
+  background:#1d4ed8;
+  border-color:#60a5fa;
+  box-shadow:0 10px 30px rgba(37,99,235,.6);
+}
+.nav-item span{
+  display:block;
+  font-weight:600;
+  color:#fff;
+  margin-bottom:2px;
+  font-size:13px;
+}
+.nav-item small{
+  color:#cbd5e1;
+  font-weight:400;
+  font-size:12px;
+  line-height:1.4;
+}
+/* main */
+.main{
+  background:#ffffff;
+  border-radius:var(--radius-xl) 0 0 var(--radius-xl);
+  padding:var(--pad-lg);
+  display:flex;
+  flex-direction:column;
+  gap:var(--pad-lg);
+}
+@media(max-width:820px){
+  .main{
+    border-radius:0 0 var(--radius-xl) var(--radius-xl);
+    padding:var(--pad-md);
   }
-  th,td{
-    border:1px solid #e2e8f0;
-    padding:10px 12px;
-    text-align:left;
-    vertical-align:top;
-  }
-  th{
-    background:#f1f5f9;
-    font-weight:600;
-    color:#1e293b;
-  }
-  .note{
-    font-size:12px;
-    color:#64748b;
-    line-height:1.5;
-  }
-  .ok{color:#16a34a;font-weight:600;}
-  .hi{color:#2563eb;font-weight:600;}
-  .tag{
-    display:inline-block;
-    background:#ecfdf5;
-    color:#065f46;
-    border:1px solid #6ee7b7;
-    font-size:12px;
-    font-weight:500;
-    padding:2px 8px;
-    border-radius:999px;
-    line-height:1.4;
-    margin-left:6px;
-  }
-  @media print{
-    body{background:#fff;padding:0;}
-    .wrap{border-radius:0;border:0;padding:0 0 16px 0;}
-  }
+}
+.section-card{
+  border:1px solid var(--border);
+  border-radius:var(--radius-md);
+  background:#fff;
+  box-shadow:0 20px 40px rgba(15,23,42,.06);
+  overflow:hidden;
+}
+.section-head{
+  background:#f8fafc;
+  border-bottom:1px solid var(--border);
+  padding:var(--pad-md) var(--pad-md) 12px;
+}
+.section-head h2{
+  margin:0;
+  font-size:15px;
+  font-weight:600;
+  color:#0f172a;
+  line-height:1.4;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:baseline;
+  gap:8px;
+}
+.section-head h2 .vi{
+  font-weight:500;
+  color:#475569;
+}
+.section-body{
+  padding:var(--pad-md);
+  overflow-x:auto;
+}
+.table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:640px;
+  font-size:13px;
+}
+.table th{
+  background:#f1f5f9;
+  text-align:left;
+  font-weight:600;
+  color:#1e293b;
+  border:1px solid var(--border);
+  padding:10px 12px;
+  line-height:1.4;
+  white-space:nowrap;
+}
+.table td{
+  border:1px solid var(--border);
+  padding:10px 12px;
+  vertical-align:top;
+  line-height:1.5;
+  color:#0f172a;
+}
+.ok{color:var(--ok);font-weight:600;}
+.hi{color:var(--hi);font-weight:600;}
+.cols-2{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:var(--pad-md);
+}
+@media(max-width:640px){
+  .cols-2{grid-template-columns:1fr;}
+}
+.block{
+  border:1px solid var(--border);
+  border-radius:var(--radius-md);
+  background:#fff;
+  padding:var(--pad-md);
+  font-size:13px;
+  line-height:1.5;
+  box-shadow:0 12px 24px rgba(15,23,42,.04);
+}
+.block h3{
+  margin:0 0 8px 0;
+  font-size:13px;
+  color:#111827;
+  font-weight:600;
+  line-height:1.4;
+}
+.block p{
+  margin:0 0 8px 0;
+  color:#334155;
+}
+.note{
+  font-size:12px;
+  line-height:1.5;
+  color:#64748b;
+  margin-top:12px;
+}
+.footer-note{
+  font-size:11px;
+  color:#94a3b8;
+  line-height:1.5;
+  text-align:center;
+  padding-bottom:8px;
+}
 </style>
 </head>
 <body>
-<div class="wrap">
 
-<h1>ELT TikTok LIVE 双语复盘日报 <span class="tag">Báo cáo song ngữ</span></h1>
-<p class="lead">
-本日报适用于中越两个团队同步阅读。<br/>
-Báo cáo này dùng để chia sẻ nhanh giữa team Trung Quốc và team Việt Nam.
-</p>
+<div class="app-shell">
 
-<h2>一、直播整体表现概览 / Tổng quan buổi LIVE hôm nay</h2>
+  <aside class="sidebar">
+    <div class="brand-block">
+      <h1>
+        ELT TikTok LIVE 报告
+        <span class="badge">Báo cáo song ngữ</span>
+      </h1>
+      <p>
+        面向：老板 / 运营 / 主播 / 中控<br/>
+        Đối tượng: Boss / vận hành / MC / điều phối
+      </p>
+    </div>
 
-<table>
-<thead>
-<tr>
-<th>指标<br/>Chỉ số</th>
-<th>今日数据<br/>Dữ liệu hôm nay</th>
-<th>对比昨日<br/>So với hôm qua</th>
-<th>说明 / Giải thích</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>⏱ 直播时长<br/>Thời lượng LIVE</td>
-<td><strong>2h 04m</strong>（2小时04分钟）</td>
-<td><span class="hi">+5%</span></td>
-<td>
-时长理想，系统已识别为“高活跃场次”。<br/>
-Thời lượng hợp lý, TikTok đánh giá phiên này là “phiên hoạt động cao”.
-</td>
-</tr>
+    <div class="nav-block">
+      <div class="nav-item active">
+        <span>1. 直播核心指标</span>
+        <small>Hiệu suất LIVE</small>
+      </div>
+      <div class="nav-item">
+        <span>2. 复盘总结</span>
+        <small>Kết luận nhanh</small>
+      </div>
+      <div class="nav-item">
+        <span>3. 下一步动作</span>
+        <small>Hành động tiếp theo</small>
+      </div>
+    </div>
 
-<tr>
-<td>💰 直接GMV<br/>Doanh thu trực tiếp</td>
-<td><strong>2,414,918₫</strong></td>
-<td><span class="hi">+43%</span></td>
-<td>
-稳步提升，说明产品信任度上升。<br/>
-Doanh thu tăng ổn định, khách hàng tin tưởng sản phẩm hơn.
-</td>
-</tr>
+    <div class="note" style="color:#cbd5e1;">
+      此文件可直接在手机端、平板、电脑浏览。支持打印。<br/>
+      File này dùng tốt trên điện thoại / tablet / PC. In được luôn.
+    </div>
+  </aside>
 
-<tr>
-<td>🛍 成交件数<br/>Số đơn hàng</td>
-<td><strong>9 单</strong></td>
-<td>+2</td>
-<td>
-核心成交集中在 Serum 50ml。<br/>
-Sản phẩm chính chốt đơn vẫn là Serum 50ml.
-</td>
-</tr>
+  <main class="main">
 
-<tr>
-<td>👀 曝光次数<br/>Lượt hiển thị</td>
-<td><strong>4.04K</strong></td>
-<td><span class="hi">+35%</span></td>
-<td>
-推荐流权重上升，算法试探性放量。<br/>
-TikTok tăng đề xuất, thuật toán đang thử mở rộng.
-</td>
-</tr>
+    <section class="section-card" id="metrics">
+      <div class="section-head">
+        <h2>① 直播整体表现概览 <span class="vi">/ Tổng quan buổi LIVE hôm nay</span></h2>
+      </div>
+      <div class="section-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>指标 / Chỉ số</th>
+              <th>今日数据 / Dữ liệu hôm nay</th>
+              <th>对比昨日 / So với hôm qua</th>
+              <th>说明 / Giải thích</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>⏱ 直播时长<br/>Thời lượng LIVE</td>
+              <td><strong>2h 04m</strong>（2小时04分钟）</td>
+              <td><span class="hi">+5%</span></td>
+              <td>时长理想，系统识别为“高活跃场次”。<br/>Thời lượng hợp lý, TikTok đánh giá đây là “phiên hoạt động cao”.</td>
+            </tr>
+            <tr>
+              <td>💰 直接GMV<br/>Doanh thu trực tiếp</td>
+              <td><strong>2,414,918₫</strong></td>
+              <td><span class="hi">+43%</span></td>
+              <td>GMV稳步提升，产品信任度提高。<br/>Doanh thu tăng ổn định, khách tin sản phẩm hơn.</td>
+            </tr>
+            <tr>
+              <td>🛍 成交件数<br/>Số đơn hàng</td>
+              <td><strong>9 单</strong></td>
+              <td>+2</td>
+              <td>核心成交集中在 Serum 50ml。<br/>Sản phẩm chính chốt đơn vẫn là Serum 50ml.</td>
+            </tr>
+            <tr>
+              <td>👀 曝光次数<br/>Lượt hiển thị</td>
+              <td><strong>4.04K</strong></td>
+              <td><span class="hi">+35%</span></td>
+              <td>推荐流权重上升，算法在试探放量。<br/>TikTok đẩy đề xuất mạnh hơn, đang test mở rộng.</td>
+            </tr>
+            <tr>
+              <td>👤 观看人数<br/>Số người xem</td>
+              <td><strong>256</strong></td>
+              <td>≈0</td>
+              <td>自然流+推荐流混合；粉丝占比20%。<br/>View tự nhiên + đề xuất; ~20% là follower.</td>
+            </tr>
+            <tr>
+              <td>💬 评论率<br/>Tỷ lệ bình luận</td>
+              <td><strong>11.52%</strong></td>
+              <td><span class="hi">+1.4%</span></td>
+              <td>主播互动频率提高。<br/>MC tương tác tốt hơn, bình luận tăng.</td>
+            </tr>
+            <tr>
+              <td>🖱 点击率 CTR<br/>Tỷ lệ click (CTR)</td>
+              <td><strong>21.48%</strong></td>
+              <td><span class="hi">+3.5%</span></td>
+              <td>封面+标题优化起效。<br/>Ảnh bìa & tiêu đề tối ưu → CTR tăng rõ.</td>
+            </tr>
+            <tr>
+              <td>💸 下单率<br/>Tỷ lệ đặt hàng</td>
+              <td><strong>3.52%</strong> <span class="ok">✅</span></td>
+              <td class="ok">达标 / Đạt chuẩn</td>
+              <td>达到 TikTok 美妆类合格区间。<br/>Nằm trong chuẩn ngành làm đẹp TikTok VN.</td>
+            </tr>
+            <tr>
+              <td>📈 平均观看时长<br/>Thời gian xem TB</td>
+              <td><strong>2m 37s</strong>（2分37秒）</td>
+              <td><span class="hi">+52s</span></td>
+              <td>留存显著提升，画面稳定。<br/>Giữ chân tốt hơn, khung hình ổn định.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-<tr>
-<td>👤 观看人数<br/>Số người xem</td>
-<td><strong>256</strong></td>
-<td>≈0</td>
-<td>
-自然流与推荐流混合，粉丝占比20%。<br/>
-Kết hợp view tự nhiên + đề xuất, 20% là người theo dõi.
-</td>
-</tr>
+    <section class="section-card" id="summary">
+      <div class="section-head">
+        <h2>② 复盘总结 <span class="vi">/ Kết luận nhanh</span></h2>
+      </div>
+      <div class="section-body cols-2">
+        <div class="block">
+          <h3>中文总结</h3>
+          <p>1. GMV 与 CTR 都在上涨，说明“封面 + 标题 + 优惠口径”的方向正确。</p>
+          <p>2. 下单率 (3.52%) 已达标，直播间不是纯曝光，是可成交的场。</p>
+          <p>3. 平均停留时长提升到 2分37秒，主播讲解方式和镜头稳定度有效果。</p>
+          <p>4. 关注率仍偏低 → 收尾阶段要更强力度“关注店铺 / 领券”提示。</p>
+        </div>
+        <div class="block">
+          <h3>Tóm tắt tiếng Việt</h3>
+          <p>1. Doanh thu & CTR đều tăng → hướng tiêu đề + offer hiện tại là đúng.</p>
+          <p>2. Tỷ lệ chốt đơn (3.52%) đạt chuẩn → phòng LIVE không chỉ xem cho vui, khách mua thật.</p>
+          <p>3. Thời gian xem TB lên 2m37s → MC nói dễ nghe hơn, khung hình ổn định hơn.</p>
+          <p>4. Tỷ lệ follow còn thấp → Cuối LIVE cần kêu gọi follow + hẹn lịch LIVE tiếp theo + mã giảm riêng cho follower.</p>
+        </div>
+      </div>
+    </section>
 
-<tr>
-<td>💬 评论率<br/>Tỷ lệ bình luận</td>
-<td><strong>11.52%</strong></td>
-<td><span class="hi">+1.4%</span></td>
-<td>
-主播互动频率提升明显。<br/>
-MC tương tác tốt hơn, bình luận tăng.
-</td>
-</tr>
+    <section class="section-card" id="actions">
+      <div class="section-head">
+        <h2>③ 下一步动作 <span class="vi">/ Hành động tiếp theo</span></h2>
+      </div>
+      <div class="section-body cols-2">
+        <div class="block">
+          <h3>给中国团队 / Cho team Trung Quốc</h3>
+          <p>• 维持 Serum 50ml 的爆款价位（469K 作为引流价），利润由 Combo 结构来吃。</p>
+          <p>• 继续保留“买1送5片面膜”这种限量赠品，它能明显拉高下单率。</p>
+          <p>• 请准备更多标准化越南语回复话术，方便中控在评论区一键贴。</p>
+        </div>
+        <div class="block">
+          <h3>给越南团队 / Gửi team Việt Nam</h3>
+          <p>• Mỗi 3 phút MC phải hỏi tên, đọc comment và nhắc bấm mua sản phẩm.</p>
+          <p>• Điều phối phải nhắc: “Comment ‘ELT’ nhận mã 30K nha~” lặp lại mỗi 10 phút.</p>
+          <p>• Cuối LIVE nhắc: “Nhớ follow shop để nhận mã mới và lịch LIVE tiếp theo nha~”.</p>
+        </div>
+      </div>
+      <div class="section-body">
+        <div class="note">
+          内部使用 / Nội bộ: 本报告用于老板、运营、主播和中控同步方向，禁止外传。<br/>
+          Báo cáo này chỉ dùng nội bộ team vận hành, vui lòng không chia sẻ ra ngoài.
+        </div>
+      </div>
+    </section>
 
-<tr>
-<td>🖱 点击率 CTR<br/>Tỷ lệ click (CTR)</td>
-<td><strong>21.48%</strong></td>
-<td><span class="hi">+3.5%</span></td>
-<td>
-文案与封面优化效果显著。<br/>
-Ảnh bìa & tiêu đề cải thiện, click tăng rõ rệt.
-</td>
-</tr>
+    <div class="footer-note">
+      ELT TikTok Shop · Dual-language Performance Brief · Generated for internal sync
+    </div>
 
-<tr>
-<td>💸 下单率<br/>Tỷ lệ đặt hàng</td>
-<td><strong>3.52%</strong> <span class="ok">✅</span></td>
-<td class="ok">达标 / Đạt chuẩn</td>
-<td>
-已进入 TikTok 美妆类优质区间。<br/>
-Đạt chuẩn ngành làm đẹp TikTok Việt Nam.
-</td>
-</tr>
-
-<tr>
-<td>📈 平均观看时长<br/>Thời gian xem TB</td>
-<td><strong>2m 37s</strong>（2分37秒）</td>
-<td><span class="hi">+52s</span></td>
-<td>
-留存提升明显，画面稳定无掉帧。<br/>
-Thời gian xem tăng, hình ảnh ổn định.
-</td>
-</tr>
-
-</tbody>
-</table>
-
-<h2>结论 / Kết luận nhanh</h2>
-<table>
-<tbody>
-<tr>
-<td style="width:50%;">
-<strong>中文总结</strong><br/>
-1. GMV 与点击率都在上涨，说明“封面+标题+优惠口径”方向正确。<br/>
-2. 下单率(3.52%) 已达标，说明直播间具备成交能力，不是纯曝光场。<br/>
-3. 平均停留时长提升到 2分37秒，证明主播的讲解方式和镜头稳定度有效果。<br/>
-4. 关注率仍偏低 → 收尾阶段需要更强的“关注店铺/领券”引导话术。
-</td>
-<td style="width:50%;">
-<strong>Tóm tắt tiếng Việt</strong><br/>
-1. Doanh thu & CTR đều tăng → hướng tiêu đề + offer hiện tại là đúng.<br/>
-2. Tỷ lệ chốt đơn (3.52%) đạt chuẩn → phòng LIVE không chỉ xem cho vui, mà mua thật.<br/>
-3. Thời gian xem TB lên 2m37s → MC nói dễ nghe hơn, khung hình ổn định hơn.<br/>
-4. Tỷ lệ follow thấp → Cuối phiên cần nhắc follow + hẹn LIVE tiếp theo + mã giảm riêng cho follower.
-</td>
-</tr>
-</tbody>
-</table>
-
-<h2>后续动作 / Hành động tiếp theo</h2>
-<table>
-<tbody>
-<tr>
-<td style="width:50%;">
-<strong>给中国团队</strong><br/>
-• 维持当前Serum 50ml的定价策略（469K当爆点，靠Combo拉利润）。<br/>
-• 继续保留“买1送5片面膜”这种限量赠品，能拉下单率。<br/>
-• 请准备更多越南语评论回复模板，方便中控快速粘贴。
-</td>
-<td style="width:50%;">
-<strong>Gửi team Việt Nam</strong><br/>
-• Mỗi 3 phút MC phải hỏi – đọc tên – kêu gọi bấm sản phẩm.<br/>
-• Điều phối phải nhắc “Comment ‘ELT’ nhận mã 30K” lặp lại 10 phút/lần.<br/>
-• Cuối LIVE nhắc: “Nhớ follow shop để nhận mã mới và lịch LIVE tiếp theo nha~”
-</td>
-</tr>
-</tbody>
-</table>
-
-<p class="note">
-本日报仅用于运营复盘与团队内部同步，禁止外传。<br/>
-Báo cáo này chỉ dùng nội bộ team vận hành, vui lòng không chia sẻ ra ngoài.
-</p>
+  </main>
 
 </div>
+
 </body>
 </html>
