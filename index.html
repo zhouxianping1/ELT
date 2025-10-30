@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -169,13 +168,26 @@ body{
 }
 .section-body{
   padding:var(--pad-md);
-  overflow-x:auto;
 }
-.table{
+
+/* 横向滚动容器，专门装表格 */
+.table-scroll{
   width:100%;
+  max-width:100%;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  border-radius:var(--radius-sm);
+  border:1px solid var(--border);
+  background:#fff;
+  box-shadow:inset 0 0 0 9999px rgb(248 250 252 / 0); /* 防止clip */
+}
+
+/* 表格 */
+.table{
+  min-width:640px; /* 允许超出小屏宽度，从而触发横滑 */
   border-collapse:collapse;
-  min-width:640px;
   font-size:13px;
+  width:100%;
 }
 .table th{
   background:#f1f5f9;
@@ -193,9 +205,11 @@ body{
   vertical-align:top;
   line-height:1.5;
   color:#0f172a;
+  background:#fff;
 }
 .ok{color:var(--ok);font-weight:600;}
 .hi{color:var(--hi);font-weight:600;}
+
 .cols-2{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -271,87 +285,93 @@ body{
     </div>
 
     <div class="note" style="color:#cbd5e1;">
-      此文件可直接在手机端、平板、电脑浏览。支持打印。<br/>
-      File này dùng tốt trên điện thoại / tablet / PC. In được luôn.
+      此文件可在手机 / 平板 / 电脑查看，支持横向滑动表格。<br/>
+      File xem tốt trên điện thoại / tablet / PC, kéo ngang bảng được.
     </div>
   </aside>
 
   <main class="main">
 
+    <!-- SECTION 1 -->
     <section class="section-card" id="metrics">
       <div class="section-head">
         <h2>① 直播整体表现概览 <span class="vi">/ Tổng quan buổi LIVE hôm nay</span></h2>
       </div>
       <div class="section-body">
-        <table class="table">
-          <thead>
-            <tr>
-              <th>指标 / Chỉ số</th>
-              <th>今日数据 / Dữ liệu hôm nay</th>
-              <th>对比昨日 / So với hôm qua</th>
-              <th>说明 / Giải thích</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>⏱ 直播时长<br/>Thời lượng LIVE</td>
-              <td><strong>2h 04m</strong>（2小时04分钟）</td>
-              <td><span class="hi">+5%</span></td>
-              <td>时长理想，系统识别为“高活跃场次”。<br/>Thời lượng hợp lý, TikTok đánh giá đây là “phiên hoạt động cao”.</td>
-            </tr>
-            <tr>
-              <td>💰 直接GMV<br/>Doanh thu trực tiếp</td>
-              <td><strong>2,414,918₫</strong></td>
-              <td><span class="hi">+43%</span></td>
-              <td>GMV稳步提升，产品信任度提高。<br/>Doanh thu tăng ổn định, khách tin sản phẩm hơn.</td>
-            </tr>
-            <tr>
-              <td>🛍 成交件数<br/>Số đơn hàng</td>
-              <td><strong>9 单</strong></td>
-              <td>+2</td>
-              <td>核心成交集中在 Serum 50ml。<br/>Sản phẩm chính chốt đơn vẫn là Serum 50ml.</td>
-            </tr>
-            <tr>
-              <td>👀 曝光次数<br/>Lượt hiển thị</td>
-              <td><strong>4.04K</strong></td>
-              <td><span class="hi">+35%</span></td>
-              <td>推荐流权重上升，算法在试探放量。<br/>TikTok đẩy đề xuất mạnh hơn, đang test mở rộng.</td>
-            </tr>
-            <tr>
-              <td>👤 观看人数<br/>Số người xem</td>
-              <td><strong>256</strong></td>
-              <td>≈0</td>
-              <td>自然流+推荐流混合；粉丝占比20%。<br/>View tự nhiên + đề xuất; ~20% là follower.</td>
-            </tr>
-            <tr>
-              <td>💬 评论率<br/>Tỷ lệ bình luận</td>
-              <td><strong>11.52%</strong></td>
-              <td><span class="hi">+1.4%</span></td>
-              <td>主播互动频率提高。<br/>MC tương tác tốt hơn, bình luận tăng.</td>
-            </tr>
-            <tr>
-              <td>🖱 点击率 CTR<br/>Tỷ lệ click (CTR)</td>
-              <td><strong>21.48%</strong></td>
-              <td><span class="hi">+3.5%</span></td>
-              <td>封面+标题优化起效。<br/>Ảnh bìa & tiêu đề tối ưu → CTR tăng rõ.</td>
-            </tr>
-            <tr>
-              <td>💸 下单率<br/>Tỷ lệ đặt hàng</td>
-              <td><strong>3.52%</strong> <span class="ok">✅</span></td>
-              <td class="ok">达标 / Đạt chuẩn</td>
-              <td>达到 TikTok 美妆类合格区间。<br/>Nằm trong chuẩn ngành làm đẹp TikTok VN.</td>
-            </tr>
-            <tr>
-              <td>📈 平均观看时长<br/>Thời gian xem TB</td>
-              <td><strong>2m 37s</strong>（2分37秒）</td>
-              <td><span class="hi">+52s</span></td>
-              <td>留存显著提升，画面稳定。<br/>Giữ chân tốt hơn, khung hình ổn định.</td>
-            </tr>
-          </tbody>
-        </table>
+
+        <div class="table-scroll">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>指标 / Chỉ số</th>
+                <th>今日数据 / Dữ liệu hôm nay</th>
+                <th>对比昨日 / So với hôm qua</th>
+                <th>说明 / Giải thích</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>⏱ 直播时长<br/>Thời lượng LIVE</td>
+                <td><strong>2h 04m</strong>（2小时04分钟）</td>
+                <td><span class="hi">+5%</span></td>
+                <td>时长理想，系统识别为“高活跃场次”。<br/>Thời lượng hợp lý, TikTok đánh giá đây là “phiên hoạt động cao”.</td>
+              </tr>
+              <tr>
+                <td>💰 直接GMV<br/>Doanh thu trực tiếp</td>
+                <td><strong>2,414,918₫</strong></td>
+                <td><span class="hi">+43%</span></td>
+                <td>GMV稳步提升，产品信任度提高。<br/>Doanh thu tăng ổn định, khách tin sản phẩm hơn.</td>
+              </tr>
+              <tr>
+                <td>🛍 成交件数<br/>Số đơn hàng</td>
+                <td><strong>9 单</strong></td>
+                <td>+2</td>
+                <td>核心成交集中在 Serum 50ml。<br/>Sản phẩm chính chốt đơn vẫn là Serum 50ml.</td>
+              </tr>
+              <tr>
+                <td>👀 曝光次数<br/>Lượt hiển thị</td>
+                <td><strong>4.04K</strong></td>
+                <td><span class="hi">+35%</span></td>
+                <td>推荐流权重上升，算法在试探放量。<br/>TikTok đẩy đề xuất mạnh hơn, đang test mở rộng.</td>
+              </tr>
+              <tr>
+                <td>👤 观看人数<br/>Số người xem</td>
+                <td><strong>256</strong></td>
+                <td>≈0</td>
+                <td>自然流+推荐流混合；粉丝占比20%。<br/>View tự nhiên + đề xuất; ~20% là follower.</td>
+              </tr>
+              <tr>
+                <td>💬 评论率<br/>Tỷ lệ bình luận</td>
+                <td><strong>11.52%</strong></td>
+                <td><span class="hi">+1.4%</span></td>
+                <td>主播互动频率提高。<br/>MC tương tác tốt hơn, bình luận tăng.</td>
+              </tr>
+              <tr>
+                <td>🖱 点击率 CTR<br/>Tỷ lệ click (CTR)</td>
+                <td><strong>21.48%</strong></td>
+                <td><span class="hi">+3.5%</span></td>
+                <td>封面+标题优化起效。<br/>Ảnh bìa & tiêu đề tối ưu → CTR tăng rõ.</td>
+              </tr>
+              <tr>
+                <td>💸 下单率<br/>Tỷ lệ đặt hàng</td>
+                <td><strong>3.52%</strong> <span class="ok">✅</span></td>
+                <td class="ok">达标 / Đạt chuẩn</td>
+                <td>达到 TikTok 美妆类合格区间。<br/>Nằm trong chuẩn ngành làm đẹp TikTok VN.</td>
+              </tr>
+              <tr>
+                <td>📈 平均观看时长<br/>Thời gian xem TB</td>
+                <td><strong>2m 37s</strong>（2分37秒）</td>
+                <td><span class="hi">+52s</span></td>
+                <td>留存显著提升，画面稳定。<br/>Giữ chân tốt hơn, khung hình ổn định.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
       </div>
     </section>
 
+    <!-- SECTION 2 -->
     <section class="section-card" id="summary">
       <div class="section-head">
         <h2>② 复盘总结 <span class="vi">/ Kết luận nhanh</span></h2>
@@ -360,7 +380,7 @@ body{
         <div class="block">
           <h3>中文总结</h3>
           <p>1. GMV 与 CTR 都在上涨，说明“封面 + 标题 + 优惠口径”的方向正确。</p>
-          <p>2. 下单率 (3.52%) 已达标，直播间不是纯曝光，是可成交的场。</p>
+          <p>2. 下单率 (3.52%) 已达标，直播间不是纯曝光，是可以成交的场。</p>
           <p>3. 平均停留时长提升到 2分37秒，主播讲解方式和镜头稳定度有效果。</p>
           <p>4. 关注率仍偏低 → 收尾阶段要更强力度“关注店铺 / 领券”提示。</p>
         </div>
@@ -374,6 +394,7 @@ body{
       </div>
     </section>
 
+    <!-- SECTION 3 -->
     <section class="section-card" id="actions">
       <div class="section-head">
         <h2>③ 下一步动作 <span class="vi">/ Hành động tiếp theo</span></h2>
@@ -392,6 +413,7 @@ body{
           <p>• Cuối LIVE nhắc: “Nhớ follow shop để nhận mã mới và lịch LIVE tiếp theo nha~”.</p>
         </div>
       </div>
+
       <div class="section-body">
         <div class="note">
           内部使用 / Nội bộ: 本报告用于老板、运营、主播和中控同步方向，禁止外传。<br/>
@@ -401,7 +423,7 @@ body{
     </section>
 
     <div class="footer-note">
-      ELT TikTok Shop · Dual-language Performance Brief · Generated for internal sync
+      ELT TikTok Shop · Dual-language Performance Brief · Internal Use Only
     </div>
 
   </main>
