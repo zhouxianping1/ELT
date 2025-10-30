@@ -1,283 +1,81 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
-<title>ELT TikTok LIVE 双语复盘 / Báo cáo song ngữ</title>
-<style>
-:root{
-  --bg:#ffffff;
-  --ink:#0f172a;
-  --sub:#475569;
-  --border:#e2e8f0;
-  --radius:14px;
-  --pad:14px;
-  --font:-apple-system,BlinkMacSystemFont,"Inter","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
-}
-*{box-sizing:border-box;-webkit-font-smoothing:antialiased;}
-body{
-  margin:0;
-  background:var(--bg);
-  font-family:var(--font);
-  color:var(--ink);
-  line-height:1.55;
-}
-.wrapper{
-  max-width:820px;
-  margin:0 auto;
-  padding:10px 10px 40px;
-}
-.header{
-  margin-bottom:14px;
-}
-.title{
-  font-size:16px;
-  font-weight:600;
-  margin:0 0 4px 0;
-}
-.badge{
-  display:inline-block;
-  background:#e0f2fe;
-  color:#0369a1;
-  padding:2px 8px;
-  border-radius:999px;
-  font-size:11px;
-  margin-left:4px;
-}
-.subtitle{
-  font-size:12px;
-  color:var(--sub);
-}
-.section{
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  margin-bottom:14px;
-  overflow:hidden;
-}
-.section-head{
-  padding:12px 14px 6px 14px;
-  background:#f8fafc;
-  border-bottom:1px solid var(--border);
-}
-.section-head h2{
-  margin:0;
-  font-size:14px;
-  font-weight:600;
-  display:flex;
-  flex-wrap:wrap;
-  gap:6px;
-  align-items:baseline;
-}
-.section-head .vi{
-  font-weight:500;
-  color:#64748b;
-  font-size:12px;
-}
-.section-body{
-  padding:12px 10px 14px;
-}
-.table-wrap{
-  width:100%;
-  overflow-x:auto;
-}
-.table{
-  width:100%;
-  min-width:600px;
-  border-collapse:collapse;
-  font-size:12px;
-}
-.table th,.table td{
-  border:1px solid var(--border);
-  padding:8px 8px;
-  text-align:left;
-  vertical-align:top;
-}
-.table th{
-  background:#f1f5f9;
-  font-weight:600;
-  white-space:nowrap;
-}
-.ok{color:#16a34a;font-weight:600;}
-.hi{color:#2563eb;font-weight:600;}
-.block{
-  border:1px solid var(--border);
-  border-radius:10px;
-  padding:10px 12px;
-  margin-bottom:10px;
-  background:#fff;
-  font-size:13px;
-}
-.block h3{
-  margin:0 0 6px 0;
-  font-size:13px;
-}
-.note{
-  font-size:12px;
-  color:#94a3b8;
-}
-.footer{
-  font-size:11px;
-  text-align:center;
-  color:#94a3b8;
-  margin-top:10px;
-}
-@media(min-width:720px){
-  .twocol{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:10px;
-  }
-}
-</style>
-</head>
-<body>
-<div class="wrapper">
-
-  <header class="header">
-    <h1 class="title">
-      ELT TikTok LIVE 报告
-      <span class="badge">Báo cáo song ngữ</span>
-    </h1>
-    <p class="subtitle">
-      面向：老板 / 运营 / 主播 / 中控 · Đối tượng: Boss / vận hành / MC / điều phối<br/>
-      此文件可在手机端直接看 / File xem tốt trên điện thoại
-    </p>
-  </header>
-
-  <!-- ① 直播整体表现概览 -->
-  <section class="section" id="metrics">
-    <div class="section-head">
-      <h2>① 直播整体表现概览 <span class="vi">/ Tổng quan buổi LIVE hôm nay</span></h2>
-    </div>
-    <div class="section-body">
-      <div class="table-wrap">
-        <table class="table">
-          <thead>
-            <tr>
-              <th>指标 / Chỉ số</th>
-              <th>今日数据 / Dữ liệu hôm nay</th>
-              <th>对比昨日 / So với hôm qua</th>
-              <th>说明 / Giải thích</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>⏱ 直播时长<br/>Thời lượng LIVE</td>
-              <td><strong>2h 04m</strong>（2小时04分钟）</td>
-              <td><span class="hi">+5%</span></td>
-              <td>时长理想，系统识别为“高活跃场次”。<br/>Thời lượng hợp lý, TikTok đánh giá đây là “phiên hoạt động cao”.</td>
-            </tr>
-            <tr>
-              <td>💰 直接GMV<br/>Doanh thu trực tiếp</td>
-              <td><strong>2,414,918₫</strong></td>
-              <td><span class="hi">+43%</span></td>
-              <td>GMV稳步提升，产品信任度提高。<br/>Doanh thu tăng ổn định, khách tin sản phẩm hơn.</td>
-            </tr>
-            <tr>
-              <td>🛍 成交件数<br/>Số đơn hàng</td>
-              <td><strong>9 单</strong></td>
-              <td>+2</td>
-              <td>核心成交集中在 Serum 50ml。<br/>Sản phẩm chính chốt đơn vẫn là Serum 50ml.</td>
-            </tr>
-            <tr>
-              <td>👀 曝光次数<br/>Lượt hiển thị</td>
-              <td><strong>4.04K</strong></td>
-              <td><span class="hi">+35%</span></td>
-              <td>推荐流权重上升，算法在试探放量。<br/>TikTok đẩy đề xuất mạnh hơn, đang test mở rộng.</td>
-            </tr>
-            <tr>
-              <td>👤 观看人数<br/>Số người xem</td>
-              <td><strong>256</strong></td>
-              <td>≈0</td>
-              <td>自然流+推荐流混合；粉丝占比20%。<br/>View tự nhiên + đề xuất; ~20% là follower.</td>
-            </tr>
-            <tr>
-              <td>💬 评论率<br/>Tỷ lệ bình luận</td>
-              <td><strong>11.52%</strong></td>
-              <td><span class="hi">+1.4%</span></td>
-              <td>主播互动频率提高。<br/>MC tương tác tốt hơn, bình luận tăng.</td>
-            </tr>
-            <tr>
-              <td>🖱 点击率 CTR<br/>Tỷ lệ click (CTR)</td>
-              <td><strong>21.48%</strong></td>
-              <td><span class="hi">+3.5%</span></td>
-              <td>封面+标题优化起效。<br/>Ảnh bìa & tiêu đề tối ưu → CTR tăng rõ.</td>
-            </tr>
-            <tr>
-              <td>💸 下单率<br/>Tỷ lệ đặt hàng</td>
-              <td><strong>3.52%</strong> <span class="ok">✅</span></td>
-              <td class="ok">达标 / Đạt chuẩn</td>
-              <td>达到 TikTok 美妆类合格区间。<br/>Nằm trong chuẩn ngành làm đẹp TikTok VN.</td>
-            </tr>
-            <tr>
-              <td>📈 平均观看时长<br/>Thời gian xem TB</td>
-              <td><strong>2m 37s</strong>（2分37秒）</td>
-              <td><span class="hi">+52s</span></td>
-              <td>留存显著提升，画面稳定。<br/>Giữ chân tốt hơn, khung hình ổn định.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- ② 复盘总结 -->
-  <section class="section" id="summary">
-    <div class="section-head">
-      <h2>② 复盘总结 <span class="vi">/ Kết luận nhanh</span></h2>
-    </div>
-    <div class="section-body">
-      <div class="twocol">
-        <div class="block">
-          <h3>中文总结</h3>
-          <p>1. GMV 与 CTR 都在上涨，说明“封面 + 标题 + 优惠口径”的方向正确。</p>
-          <p>2. 下单率 (3.52%) 已达标，直播间不是纯曝光，是可成交的场。</p>
-          <p>3. 平均停留时长提升到 2分37秒，主播讲解方式和镜头稳定度有效果。</p>
-          <p>4. 关注率仍偏低 → 收尾阶段要更强力度“关注店铺 / 领券”提示。</p>
-        </div>
-        <div class="block">
-          <h3>Tóm tắt tiếng Việt</h3>
-          <p>1. Doanh thu & CTR đều tăng → hướng tiêu đề + offer hiện tại là đúng.</p>
-          <p>2. Tỷ lệ chốt đơn (3.52%) đạt chuẩn → phòng LIVE không chỉ xem cho vui, khách mua thật.</p>
-          <p>3. Thời gian xem TB lên 2m37s → MC nói dễ nghe hơn, khung hình ổn định hơn.</p>
-          <p>4. Tỷ lệ follow còn thấp → Cuối LIVE cần kêu gọi follow + hẹn lịch LIVE tiếp theo + mã giảm riêng cho follower.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ③ 下一步动作 -->
-  <section class="section" id="actions">
-    <div class="section-head">
-      <h2>③ 下一步动作 <span class="vi">/ Hành động tiếp theo</span></h2>
-    </div>
-    <div class="section-body">
-      <div class="twocol">
-        <div class="block">
-          <h3>给中国团队 / Cho team Trung Quốc</h3>
-          <p>• 维持 Serum 50ml 的爆款价位（469K 作为引流价），利润由 Combo 结构来吃。</p>
-          <p>• 继续保留“买1送5片面膜”这种限量赠品，它能明显拉高下单率。</p>
-          <p>• 请准备更多标准化越南语回复话术，方便中控在评论区一键贴。</p>
-        </div>
-        <div class="block">
-          <h3>给越南团队 / Gửi team Việt Nam</h3>
-          <p>• Mỗi 3 phút MC phải hỏi tên, đọc comment và nhắc bấm mua sản phẩm.</p>
-          <p>• Điều phối phải nhắc: “Comment ‘ELT’ nhận mã 30K nha~” lặp lại mỗi 10 phút.</p>
-          <p>• Cuối LIVE nhắc: “Nhớ follow shop để nhận mã mới và lịch LIVE tiếp theo nha~”.</p>
-        </div>
-      </div>
-      <p class="note" style="margin-top:6px;">
-        内部使用 / Nội bộ: 本报告用于老板、运营、主播和中控同步方向，禁止外传。<br/>
-        Báo cáo này chỉ dùng nội bộ team vận hành, vui lòng không chia sẻ ra ngoài.
-      </p>
-    </div>
-  </section>
-
-  <div class="footer">
-    ELT TikTok Shop · Dual-language Performance Brief · Generated for internal sync
+<!-- ① 直播整体表现概览 -->
+<section class="section" id="metrics">
+  <div class="section-head">
+    <h2>① 直播整体表现概览 <span class="vi">/ Tổng quan buổi LIVE hôm nay</span></h2>
   </div>
+  <div class="section-body metrics-cards">
+    
+    <!-- 1 -->
+    <div class="metric-card">
+      <div class="mc-title">⏱ 直播时长 / Thời lượng LIVE</div>
+      <div class="mc-value">2h 04m</div>
+      <div class="mc-sub">对比昨日 / So với hôm qua: <span class="mc-up">+5%</span></div>
+      <div class="mc-note">时长理想，系统识别为“高活跃场次”。<br/>Thời lượng hợp lý, TikTok đánh giá “phiên hoạt động cao”.</div>
+    </div>
 
-</div>
-</body>
-</html>
+    <!-- 2 -->
+    <div class="metric-card">
+      <div class="mc-title">💰 直接GMV / Doanh thu trực tiếp</div>
+      <div class="mc-value">2,414,918₫</div>
+      <div class="mc-sub">对比昨日 / So với hôm qua: <span class="mc-up">+43%</span></div>
+      <div class="mc-note">GMV稳步提升，产品信任度提高.<br/>Doanh thu tăng ổn định, khách tin sản phẩm hơn.</div>
+    </div>
+
+    <!-- 3 -->
+    <div class="metric-card">
+      <div class="mc-title">🛍 成交件数 / Số đơn hàng</div>
+      <div class="mc-value">9 单</div>
+      <div class="mc-sub">对比昨日 / So với hôm qua: <span class="mc-text">+2</span></div>
+      <div class="mc-note">核心成交集中在 Serum 50ml.<br/>Đơn chốt chủ yếu ở Serum 50ml.</div>
+    </div>
+
+    <!-- 4 -->
+    <div class="metric-card">
+      <div class="mc-title">👀 曝光次数 / Lượt hiển thị</div>
+      <div class="mc-value">4.04K</div>
+      <div class="mc-sub">对比昨日 / So với hôm qua: <span class="mc-up">+35%</span></div>
+      <div class="mc-note">推荐流权重上升，算法在试探放量.<br/>TikTok đẩy đề xuất mạnh hơn, đang test mở rộng.</div>
+    </div>
+
+    <!-- 5 -->
+    <div class="metric-card">
+      <div class="mc-title">👤 观看人数 / Số người xem</div>
+      <div class="mc-value">256</div>
+      <div class="mc-sub">对比昨日 / So với hôm qua: ≈0</div>
+      <div class="mc-note">自然流+推荐流混合；粉丝占比约 20%.<br/>View tự nhiên + đề xuất; ~20% là follower.</div>
+    </div>
+
+    <!-- 6 -->
+    <div class="metric-card">
+      <div class="mc-title">💬 评论率 / Tỷ lệ bình luận</div>
+      <div class="mc-value">11.52%</div>
+      <div class="mc-sub">对比昨日 / So với hôm qua: <span class="mc-up">+1.4%</span></div>
+      <div class="mc-note">主播互动频率提高.<br/>MC tương tác tốt hơn.</div>
+    </div>
+
+    <!-- 7 -->
+    <div class="metric-card">
+      <div class="mc-title">🖱 点击率 CTR / Tỷ lệ click (CTR)</div>
+      <div class="mc-value">21.48%</div>
+      <div class="mc-sub">对比昨日 / So với hôm qua: <span class="mc-up">+3.5%</span></div>
+      <div class="mc-note">封面 + 标题 优化起效.<br/>Ảnh bìa & tiêu đề tối ưu → CTR tăng.</div>
+    </div>
+
+    <!-- 8 -->
+    <div class="metric-card">
+      <div class="mc-title">💸 下单率 / Tỷ lệ đặt hàng</div>
+      <div class="mc-value">3.52% <span class="mc-ok">✅</span></div>
+      <div class="mc-sub">对比昨日 / So với hôm qua: <span class="mc-ok">达标 / Đạt chuẩn</span></div>
+      <div class="mc-note">达到 TikTok 美妆合格区间.<br/>Trong chuẩn ngành làm đẹp TikTok VN.</div>
+    </div>
+
+    <!-- 9 -->
+    <div class="metric-card">
+      <div class="mc-title">📈 平均观看时长 / Thời gian xem TB</div>
+      <div class="mc-value">2m 37s</div>
+      <div class="mc-sub">对比昨日 / So với hôm qua: <span class="mc-up">+52s</span></div>
+      <div class="mc-note">留存提升，画面稳定.<br/>Giữ chân tốt hơn, khung hình ổn định.</div>
+    </div>
+
+  </div>
+</section>
