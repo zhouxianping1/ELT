@@ -1,122 +1,233 @@
+
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>BÁO CÁO TỔNG KẾT LIVE TIKTOK – ELT VIỆT NAM (100% TIẾNG VIỆT)</title>
+<title>ELT TikTok Live Report - 双语日报</title>
 <style>
-  @page { size: A4; margin: 16mm; }
-  :root{
-    --ink:#0f172a; --muted:#475569; --border:#e2e8f0; --bg:#f8fafc;
-    --good:#16a34a; --warn:#d97706; --bad:#dc2626;
+  body{
+    font-family: -apple-system,BlinkMacSystemFont,"Inter","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+    color:#0f172a;
+    background:#f8fafc;
+    line-height:1.55;
+    margin:0;
+    padding:24px;
   }
-  *{box-sizing:border-box}
-  body{font-family: Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
-       color:var(--ink); line-height:1.55; margin:0; background:var(--bg);}
-  .sheet{max-width:980px;margin:0 auto;background:#fff;border:1px solid var(--border);
-         border-radius:12px;padding:24px 26px;}
-  h1{font-size:22px;margin:0 0 8px 0}
-  h2{font-size:18px;margin:18px 0 8px 0}
-  h3{font-size:16px;margin:14px 0 6px 0}
-  p.lead{color:var(--muted);margin:0 0 12px 0}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
-  .kpi{border:1px solid var(--border);border-radius:10px;padding:10px 12px;background:#fbfdff}
-  .kpi .v{font-size:18px;font-weight:700}
-  .good{color:var(--good)} .warn{color:var(--warn)} .bad{color:var(--bad)}
-  .table{width:100%;border-collapse:collapse;margin:6px 0 10px 0}
-  .table th,.table td{border:1px solid var(--border);padding:8px 10px;font-size:13.5px;vertical-align:top}
-  .note{font-size:12.5px;color:var(--muted)}
-  .code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#f1f5f9;
-        border:1px solid var(--border);border-radius:8px;padding:2px 6px}
-  .split{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  @media print{body{background:#fff}.sheet{border:0;border-radius:0;padding:0}}
+  .wrap{
+    max-width:1000px;
+    margin:0 auto;
+    background:#fff;
+    border:1px solid #e2e8f0;
+    border-radius:16px;
+    padding:24px 28px 32px;
+  }
+  h1{font-size:20px;margin:0 0 6px 0;color:#0f172a;line-height:1.4;}
+  h2{font-size:17px;margin:20px 0 10px 0;color:#111827;line-height:1.4;}
+  p.lead{color:#475569;font-size:14px;margin:0 0 16px 0;line-height:1.5;}
+  table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:14px;
+    margin:12px 0 20px;
+  }
+  th,td{
+    border:1px solid #e2e8f0;
+    padding:10px 12px;
+    text-align:left;
+    vertical-align:top;
+  }
+  th{
+    background:#f1f5f9;
+    font-weight:600;
+    color:#1e293b;
+  }
+  .note{
+    font-size:12px;
+    color:#64748b;
+    line-height:1.5;
+  }
+  .ok{color:#16a34a;font-weight:600;}
+  .hi{color:#2563eb;font-weight:600;}
+  .tag{
+    display:inline-block;
+    background:#ecfdf5;
+    color:#065f46;
+    border:1px solid #6ee7b7;
+    font-size:12px;
+    font-weight:500;
+    padding:2px 8px;
+    border-radius:999px;
+    line-height:1.4;
+    margin-left:6px;
+  }
+  @media print{
+    body{background:#fff;padding:0;}
+    .wrap{border-radius:0;border:0;padding:0 0 16px 0;}
+  }
 </style>
 </head>
 <body>
-  <div class="sheet">
-    <h1>BÁO CÁO TỔNG KẾT LIVE TIKTOK – ELT VIỆT NAM</h1>
-    <p class="lead">Phiên: 2025-10-29 • Thời lượng: 1h59m • Nguồn: số liệu LIVE + quy hoạch vận hành & bảng giá nội bộ</p>
+<div class="wrap">
 
-    <h2>I. KẾT QUẢ CHÍNH</h2>
-    <div class="grid">
-      <div class="kpi"><div>GMV trực tiếp</div><div class="v good">2,483,088 ₫</div></div>
-      <div class="kpi"><div>Số đơn</div><div class="v">7</div></div>
-      <div class="kpi"><div>Lượt hiển thị</div><div class="v">3.07K</div></div>
-      <div class="kpi"><div>Lượt xem</div><div class="v">310</div></div>
-      <div class="kpi"><div>Thời lượng xem TB</div><div class="v">1m32s</div></div>
-      <div class="kpi"><div>CTR (nhấn sản phẩm)</div><div class="v good">17.42%</div></div>
-      <div class="kpi"><div>Tỷ lệ đặt hàng</div><div class="v good">2.26%</div></div>
-      <div class="kpi"><div>Tỷ lệ bình luận</div><div class="v">9.27%</div></div>
-      <div class="kpi"><div>Tỷ lệ follow</div><div class="v warn">0.64%</div></div>
-      <div class="kpi"><div>Người đang xem</div><div class="v">257</div></div>
-    </div>
+<h1>ELT TikTok LIVE 双语复盘日报 <span class="tag">Báo cáo song ngữ</span></h1>
+<p class="lead">
+本日报适用于中越两个团队同步阅读。<br/>
+Báo cáo này dùng để chia sẻ nhanh giữa team Trung Quốc và team Việt Nam.
+</p>
 
-    <h2>II. CHẨN ĐOÁN THEO CẤU TRÚC</h2>
-    <table class="table">
-      <thead><tr><th>Khía cạnh</th><th>Hiện trạng</th><th>Kết luận & rủi ro</th></tr></thead>
-      <tbody>
-        <tr>
-          <td>Lưu lượng & thuật toán</td>
-          <td>Đẩy bởi thuật toán ~77%. Tỷ lệ vào phòng tổng 10.1% nhưng vào từ “preview” chỉ ~1–2%.</td>
-          <td>Cần mạnh hơn ở tiêu đề/cover có số & ưu đãi; tăng tín hiệu tương tác 5 phút đầu.</td>
-        </tr>
-        <tr>
-          <td>Giữ chân nội dung</td>
-          <td>Thời lượng TB 1m32s (+27s so với phiên trước); có 52 lượt xem > 1 phút.</td>
-          <td>Câu hỏi tương tác hiệu quả; giữa phiên mật độ CTA giảm, cuối phiên hơi phẳng.</td>
-        </tr>
-        <tr>
-          <td>Cấu trúc SKU</td>
-          <td>Serum 50ml đóng góp ~100% GMV; combo có click nhưng chưa chốt.</td>
-          <td>Áp dụng “combo giới hạn + tặng mask” để tăng AOV; hướng khách chốt đơn 2 là Combo.</td>
-        </tr>
-        <tr>
-          <td>Tích lũy follow</td>
-          <td>0.64% (thấp)</td>
-          <td>Thiếu “call to follow” ở cuối phiên: nhắc follow + đặt lịch phiên sau + follow nhận mã.</td>
-        </tr>
-      </tbody>
-    </table>
+<h2>一、直播整体表现概览 / Tổng quan buổi LIVE hôm nay</h2>
 
-    <h2>III. HÀNH ĐỘNG ÁP DỤNG NGAY</h2>
-    <ul>
-      <li>Tiêu đề/cover thống nhất: <span class="code">“Serum ELT 50ml 🌿 Sáng da 7 ngày – MUA 1 TẶNG 5 MASK 🎁”</span>.</li>
-      <li>Nhịp MC: mỗi <b>3 phút</b> đặt câu hỏi; mỗi <b>5 phút</b> đọc CTA; mỗi <b>5–10 phút</b> đổi sản phẩm ghim.</li>
-      <li>Luân phiên ghim: <b>Serum</b> → <b>Toner+Serum (599K)</b> → <b>Serum+Kem mắt (689K)</b> → <b>Serum</b>.</li>
-      <li>Voucher: đầu phiên 30K × 20 mã; 15’ cuối 50K × 10 mã. Quà GWP tự động: <b>tặng 5 mask/đơn</b>, giới hạn 100 phần.</li>
-      <li>Cuối LIVE: nhắc <b>follow</b> → <b>hẹn giờ phiên sau</b> → <b>đếm ngược 5 phút + tồn kho còn lại</b>.</li>
-    </ul>
+<table>
+<thead>
+<tr>
+<th>指标<br/>Chỉ số</th>
+<th>今日数据<br/>Dữ liệu hôm nay</th>
+<th>对比昨日<br/>So với hôm qua</th>
+<th>说明 / Giải thích</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>⏱ 直播时长<br/>Thời lượng LIVE</td>
+<td><strong>2h 04m</strong>（2小时04分钟）</td>
+<td><span class="hi">+5%</span></td>
+<td>
+时长理想，系统已识别为“高活跃场次”。<br/>
+Thời lượng hợp lý, TikTok đánh giá phiên này là “phiên hoạt động cao”.
+</td>
+</tr>
 
-    <h2>IV. GIÁ & BIÊN LỢI NHUẬN (THEO BẢNG GIÁ NỘI BỘ)</h2>
-    <ul>
-      <li>Serum 50ml hòa vốn ≈ <b>468K</b>; giá 469K chỉ dùng để “đẩy đơn ngắn hạn”. Duy trì lợi nhuận bằng combo để san sẻ <b>phí nền tảng 22.5% + ads ~20%</b>.</li>
-      <li>Mục tiêu ROAS ads ≥ <b>5.0</b>; thấp hơn thì tắt/quay lại sửa creative.</li>
-      <li>Thông điệp chuẩn: da nhạy cảm dùng được – <b>không cồn, không hương liệu</b>; khuyên test sau tai.</li>
-    </ul>
+<tr>
+<td>💰 直接GMV<br/>Doanh thu trực tiếp</td>
+<td><strong>2,414,918₫</strong></td>
+<td><span class="hi">+43%</span></td>
+<td>
+稳步提升，说明产品信任度上升。<br/>
+Doanh thu tăng ổn định, khách hàng tin tưởng sản phẩm hơn.
+</td>
+</tr>
 
-    <h2>V. MỤC TIÊU PHIÊN TỚI</h2>
-    <div class="grid">
-      <div class="kpi"><div>Lượt hiển thị ≥</div><div class="v">6K</div></div>
-      <div class="kpi"><div>CTR ≥</div><div class="v">20%</div></div>
-      <div class="kpi"><div>Tỷ lệ đặt hàng ≥</div><div class="v">3%</div></div>
-      <div class="kpi"><div>Thời lượng xem TB ≥</div><div class="v">1m45s</div></div>
-      <div class="kpi"><div>Tỷ lệ follow ≥</div><div class="v">1.2%</div></div>
-      <div class="kpi"><div>GMV mục tiêu</div><div class="v">≥ 3,000,000 ₫</div></div>
-    </div>
+<tr>
+<td>🛍 成交件数<br/>Số đơn hàng</td>
+<td><strong>9 单</strong></td>
+<td>+2</td>
+<td>
+核心成交集中在 Serum 50ml。<br/>
+Sản phẩm chính chốt đơn vẫn là Serum 50ml.
+</td>
+</tr>
 
-    <h2>VI. CTA MẪU (MC ĐỌC NGẮN – RÕ)</h2>
-    <div class="split">
-      <div>
-        <h3>CTA 1</h3>
-        <p class="code">Bấm sản phẩm bên dưới → Nhận mã → Mua ngay 469K; trong 5 phút tặng thêm 5 mask!</p>
-      </div>
-      <div>
-        <h3>CTA 2</h3>
-        <p class="code">Comment “ELT” nhận mã 30K; combo Toner+Serum 599K – số lượng giới hạn tối nay!</p>
-      </div>
-    </div>
+<tr>
+<td>👀 曝光次数<br/>Lượt hiển thị</td>
+<td><strong>4.04K</strong></td>
+<td><span class="hi">+35%</span></td>
+<td>
+推荐流权重上升，算法试探性放量。<br/>
+TikTok tăng đề xuất, thuật toán đang thử mở rộng.
+</td>
+</tr>
 
-    <p class="note">Ghi chú: Báo cáo chỉ dùng nội bộ đội LIVE ELT Việt Nam. Tất cả khuyến mãi phải tuân thủ chính sách TikTok Shop Vietnam và tài liệu thương hiệu.</p>
-  </div>
+<tr>
+<td>👤 观看人数<br/>Số người xem</td>
+<td><strong>256</strong></td>
+<td>≈0</td>
+<td>
+自然流与推荐流混合，粉丝占比20%。<br/>
+Kết hợp view tự nhiên + đề xuất, 20% là người theo dõi.
+</td>
+</tr>
+
+<tr>
+<td>💬 评论率<br/>Tỷ lệ bình luận</td>
+<td><strong>11.52%</strong></td>
+<td><span class="hi">+1.4%</span></td>
+<td>
+主播互动频率提升明显。<br/>
+MC tương tác tốt hơn, bình luận tăng.
+</td>
+</tr>
+
+<tr>
+<td>🖱 点击率 CTR<br/>Tỷ lệ click (CTR)</td>
+<td><strong>21.48%</strong></td>
+<td><span class="hi">+3.5%</span></td>
+<td>
+文案与封面优化效果显著。<br/>
+Ảnh bìa & tiêu đề cải thiện, click tăng rõ rệt.
+</td>
+</tr>
+
+<tr>
+<td>💸 下单率<br/>Tỷ lệ đặt hàng</td>
+<td><strong>3.52%</strong> <span class="ok">✅</span></td>
+<td class="ok">达标 / Đạt chuẩn</td>
+<td>
+已进入 TikTok 美妆类优质区间。<br/>
+Đạt chuẩn ngành làm đẹp TikTok Việt Nam.
+</td>
+</tr>
+
+<tr>
+<td>📈 平均观看时长<br/>Thời gian xem TB</td>
+<td><strong>2m 37s</strong>（2分37秒）</td>
+<td><span class="hi">+52s</span></td>
+<td>
+留存提升明显，画面稳定无掉帧。<br/>
+Thời gian xem tăng, hình ảnh ổn định.
+</td>
+</tr>
+
+</tbody>
+</table>
+
+<h2>结论 / Kết luận nhanh</h2>
+<table>
+<tbody>
+<tr>
+<td style="width:50%;">
+<strong>中文总结</strong><br/>
+1. GMV 与点击率都在上涨，说明“封面+标题+优惠口径”方向正确。<br/>
+2. 下单率(3.52%) 已达标，说明直播间具备成交能力，不是纯曝光场。<br/>
+3. 平均停留时长提升到 2分37秒，证明主播的讲解方式和镜头稳定度有效果。<br/>
+4. 关注率仍偏低 → 收尾阶段需要更强的“关注店铺/领券”引导话术。
+</td>
+<td style="width:50%;">
+<strong>Tóm tắt tiếng Việt</strong><br/>
+1. Doanh thu & CTR đều tăng → hướng tiêu đề + offer hiện tại là đúng.<br/>
+2. Tỷ lệ chốt đơn (3.52%) đạt chuẩn → phòng LIVE không chỉ xem cho vui, mà mua thật.<br/>
+3. Thời gian xem TB lên 2m37s → MC nói dễ nghe hơn, khung hình ổn định hơn.<br/>
+4. Tỷ lệ follow thấp → Cuối phiên cần nhắc follow + hẹn LIVE tiếp theo + mã giảm riêng cho follower.
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2>后续动作 / Hành động tiếp theo</h2>
+<table>
+<tbody>
+<tr>
+<td style="width:50%;">
+<strong>给中国团队</strong><br/>
+• 维持当前Serum 50ml的定价策略（469K当爆点，靠Combo拉利润）。<br/>
+• 继续保留“买1送5片面膜”这种限量赠品，能拉下单率。<br/>
+• 请准备更多越南语评论回复模板，方便中控快速粘贴。
+</td>
+<td style="width:50%;">
+<strong>Gửi team Việt Nam</strong><br/>
+• Mỗi 3 phút MC phải hỏi – đọc tên – kêu gọi bấm sản phẩm.<br/>
+• Điều phối phải nhắc “Comment ‘ELT’ nhận mã 30K” lặp lại 10 phút/lần.<br/>
+• Cuối LIVE nhắc: “Nhớ follow shop để nhận mã mới và lịch LIVE tiếp theo nha~”
+</td>
+</tr>
+</tbody>
+</table>
+
+<p class="note">
+本日报仅用于运营复盘与团队内部同步，禁止外传。<br/>
+Báo cáo này chỉ dùng nội bộ team vận hành, vui lòng không chia sẻ ra ngoài.
+</p>
+
+</div>
 </body>
 </html>
