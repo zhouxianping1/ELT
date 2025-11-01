@@ -1,38 +1,44 @@
 // middleware.js
 import { NextResponse } from "next/server";
 
-const PASS = process.env.SITE_PASS || "buzhidao";
+// 密码：环境变量 SITE_PASS 优先，否则用固定值
+const PASS = process.env.SITE_PASS ?? "buzhidao";
 
-export function middleware(req) {
-  const url = new URL(req.url);
+export function middleware(request) {
+  // 解析当前请求的 URL
+  const { searchParams } = new URL(request.url);
+  const pass = searchParams.get("pass");
 
-  if (url.searchParams.get("pass") === PASS) {
+  // 如果带了正确密码就放行
+  if (pass === PASS) {
     return NextResponse.next();
   }
 
-  return new NextResponse(
-    `
+  // 否则返回一个非常简单的页面（纯文本/超简单 HTML）
+  const html = `
+    <!doctype html>
     <html>
-      <head><meta charset="utf-8" /></head>
-      <body style="font-family:sans-serif;display:flex;align-items:center;justify-content:center;min-height:100vh;background:#f5f5f5;">
-        <form method="GET" style="background:#fff;padding:20px 24px;border-radius:12px;box-shadow:0 6px 30px rgba(0,0,0,.08);min-width:280px;">
-          <h3 style="margin:0 0 12px 0;">🔒 请输入访问密码</h3>
-          <p style="margin:0 0 12px 0;color:#666;font-size:13px;">Mật khẩu: buzhidao</p>
-          <input name="pass" type="password" placeholder="Password" style="width:100%;padding:8px 10px;margin-bottom:12px;border:1px solid #ddd;border-radius:6px;" />
-          <button type="submit" style="width:100%;background:#000;color:#fff;border:none;padding:8px 10px;border-radius:6px;cursor:pointer;">进入 / Vào</button>
+      <head><meta charset="utf-8" /><title>Protected</title></head>
+      <body style="font-family:sans-serif;padding:24px;">
+        <h2>🔒 需要访问密码 / Cần mật khẩu</h2>
+        <form method="GET" style="margin-top:16px;">
+          <input name="pass" placeholder="buzhidao" style="padding:6px 10px;" />
+          <button type="submit" style="padding:6px 10px;margin-left:6px;">进入</button>
         </form>
+        <p style="margin-top:8px;color:#666;">Mật khẩu mặc định: <b>buzhidao</b></p>
       </body>
     </html>
-    `,
-    {
-      status: 401,
-      headers: {
-        "content-type": "text/html; charset=utf-8",
-      },
-    }
-  );
+  `;
+
+  return new NextResponse(html, {
+    status: 401,
+    headers: {
+      "content-type": "text/html; charset=utf-8",
+    },
+  });
 }
 
+// 让所有路径都经过这个中间件
 export const config = {
   matcher: ["/:path*"],
 };
