@@ -1,87 +1,108 @@
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
-<title>ELT · 今日复盘（去刷单）/ Báo cáo hôm nay (loại đơn ảo)</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>ELT TikTok LIVE 复盘 | Tổng kết</title>
 <style>
-*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Inter","PingFang SC","Microsoft YaHei",system-ui,sans-serif;background:#0b1220;color:#e5eefb}
-.wrap{max-width:820px;margin:0 auto;padding:14px}
-.card{background:#0f172a;border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px;margin:12px 0;box-shadow:0 10px 30px rgba(2,6,23,.35)}
-h1{font-size:18px;margin:0 0 8px 0}
-h2{font-size:16px;margin:0 0 10px 0}
-h3{font-size:14px;margin:10px 0 8px 0;color:#cbd5e1}
-p,li{font-size:14px;line-height:1.6;margin:6px 0}
-.badge{display:inline-block;font-size:11px;color:#065f46;background:#ecfdf5;border:1px solid #6ee7b7;border-radius:999px;padding:2px 8px;margin-left:8px}
-.kpi{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.kpi .b{background:#111827;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:10px}
-.kpi .b b{font-size:16px;color:#60a5fa}
-ul{padding-left:18px}
-.btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
-.btn{background:#2563eb;border:1px solid #60a5fa;color:#fff;border-radius:999px;padding:8px 12px;font-size:14px;text-decoration:none;display:inline-block;box-shadow:0 6px 18px rgba(37,99,235,.45)}
-.note{color:#94a3b8;font-size:12px}
-.sep{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);margin:12px 0}
+  :root{
+    --bg:#0b1220; --card:#0f172a; --soft:#111827; --text:#e5e7eb; --muted:#9ca3af;
+    --accent:#38bdf8; --accent2:#f59e0b; --ok:#22c55e; --warn:#f97316; --danger:#ef4444;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,PingFang SC,Microsoft YaHei,sans-serif;background:linear-gradient(180deg,#0b1220,#0a1326 30%,#071427);color:var(--text);}
+  .wrap{max-width:900px;margin:0 auto;padding:16px}
+  .card{background:linear-gradient(180deg,#0f172a,#0b1220);border:1px solid #1f2937;border-radius:16px;padding:16px;margin:12px 0;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+  h1{font-size:22px;margin:6px 0 12px;letter-spacing:.5px}
+  h2{font-size:18px;margin:12px 0}
+  .tag{display:inline-block;padding:6px 10px;border-radius:999px;font-size:12px;margin-right:6px;border:1px solid #1f2937;background:#0b1220;color:#93c5fd}
+  ul{list-style:none;padding:0;margin:0}
+  li{padding:8px 0;border-bottom:1px dashed rgba(148,163,184,.22)}
+  li:last-child{border-bottom:0}
+  .cn{display:block;color:#e5e7eb}
+  .vi{display:block;color:#93c5fd;margin-top:2px}
+  .grid{display:grid;grid-template-columns:1fr;gap:12px}
+  .kpi{display:flex;gap:10px;flex-wrap:wrap}
+  .pill{background:#0b1220;border:1px solid #1f2937;border-radius:12px;padding:10px 12px}
+  .ok{color:var(--ok)} .warn{color:var(--warn)} .danger{color:var(--danger)}
+  footer{color:#64748b;font-size:12px;text-align:center;padding:14px}
+  @media(min-width:760px){ .grid{grid-template-columns:1fr 1fr} }
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="card">
-    <h1>ELT · 今日复盘（去刷单口径）<span class="badge">Báo cáo hôm nay · loại đơn ảo</span></h1>
+    <span class="tag">ELT Vietnam</span>
+    <span class="tag">TikTok LIVE</span>
+    <h1>复盘摘要 | Tóm tắt phiên LIVE hôm nay</h1>
     <div class="kpi">
-      <div class="b"><div>真实成交 / Đơn thật</div><b>0 单 · 0₫</b></div>
-      <div class="b"><div>观看 / Hiển thị – Người xem</div><b>≈9.39K · 324</b></div>
-      <div class="b"><div>平均停留 / TG xem TB</div><b>57s <span class="note">（目标 ≥90s）</span></b></div>
-      <div class="b"><div>CTR</div><b>14.44% <span class="note">（目标 ≥18%）</span></b></div>
+      <div class="pill"><span class="cn">曝光：1.45K</span><span class="vi">Lượt hiển thị: 1.45K</span></div>
+      <div class="pill"><span class="cn">观看人数：273（平均停留 1m36s）</span><span class="vi">Người xem: 273 (thời gian xem TB 1m36s)</span></div>
+      <div class="pill"><span class="cn">点击率：<b class="ok">13.55%</b></span><span class="vi">CTR: <b class="ok">13.55%</b></span></div>
+      <div class="pill"><span class="cn">进房率：<b class="warn">4.53%</b></span><span class="vi">Vào phòng: <b class="warn">4.53%</b></span></div>
+      <div class="pill"><span class="cn">成交：0 单</span><span class="vi">Đơn hàng: 0</span></div>
+      <div class="pill"><span class="cn">客群：25–34 岁 57.22%</span><span class="vi">Nhóm tuổi: 25–34 chiếm 57.22%</span></div>
     </div>
   </div>
 
   <div class="card">
-    <h2>🧭 结论 / Kết luận</h2>
+    <h2>诊断 | Chẩn đoán</h2>
     <ul>
-      <li>能吸引路过，但<strong>首屏钩子弱</strong> → 进房少 / 停留短 / 下单低。</li>
-      <li><strong>搜索流量质量最好</strong>（量小，需放大）。</li>
-    </ul>
-    <ul>
-      <li>Ảnh/tiêu đề hút nhưng <strong>móc câu 3–30s đầu yếu</strong> → vào phòng & giữ chân kém.</li>
-      <li><strong>Search chất lượng tốt</strong> nhưng còn ít → cần mở rộng.</li>
+      <li><span class="cn">进房断层：预览还行但进房率低（4.53%），封面/标题/首屏 10 秒不够强。</span><span class="vi">Đứt tầng vào phòng: preview ổn nhưng tỷ lệ vào thấp (4.53%), cover/tiêu đề/móc 10s đầu chưa đủ mạnh.</span></li>
+      <li><span class="cn">转化断层：有点击无下单，多因福利兑现弱、CTA分散、Pin节奏慢或下单顾虑未解除。</span><span class="vi">Đứt tầng chuyển đổi: có click nhưng không chốt do quyền lợi chưa rõ, CTA phân tán, nhịp Pin chậm hoặc lo ngại khi đặt hàng chưa gỡ.</span></li>
+      <li><span class="cn">搜索未吃满：功效关键词出现频率不够。</span><span class="vi">Chưa ăn hết search: từ khóa công dụng chưa lặp đủ.</span></li>
     </ul>
   </div>
 
   <div class="card">
-    <h2>🚀 下一场做 5 件事 / 5 việc phải làm</h2>
-    <ol>
-      <li><b>首屏30秒强钩子 / Hook 30s:</b> 
-        <div class="sep"></div>
-        <div>中：<i>现在 <b>469K</b>，<b>买1送5</b>，<b>免运</b>；点<b>购物袋</b>先<b>加购领30K券</b>，<b>前20单</b>我读名字送旅行装！</i></div>
-        <div>VI：<i><b>469K</b>, <b>mua 1 tặng 5</b>, <b>Freeship</b>; bấm <b>túi hàng</b> <b>thêm giỏ nhận mã 30K</b>, <b>20 đơn đầu</b> mình đọc tên tặng mini!</i></div>
-      </li>
-      <li><b>10 分钟一轮节奏 / Nhịp 10’:</b> 功效证据 → 价格&赠品实拍 → 社证/库存 → 强 CTA。</li>
-      <li><b>PIN 常亮 / PIN thường trực:</b> 主品 60–120s，插次品 20–30s。</li>
-      <li><b>评论&弹幕循环 / Comment:</b> “输入 <b>ELT</b> 领 30K / Nhập <b>ELT</b> nhận 30K”；“前20单送旅行装 / 20 đơn đầu tặng mini”。</li>
-      <li><b>放大搜索 / Mở rộng Search:</b> 标题+口播关键词；短视频结尾强引导“đang LIVE – vào nhận quà”。</li>
-    </ol>
-  </div>
-
-  <div class="card">
-    <h2>🎯 明日真实 KPI / KPI thật</h2>
+    <h2>关键改法（立即执行）| Hành động sửa ngay</h2>
     <ul>
-      <li>平均停留 ≥ <b>90s</b> · CTR ≥ <b>18%</b> · 加购率 ≥ <b>3%</b></li>
-      <li>关注率 ≥ <b>0.6%</b> · 下单率 ≥ <b>2%</b></li>
+      <li><span class="cn">封面+标题：挂东南亚风侧栏；标题含“买1送5 / Freeship / 7天提亮”。</span><span class="vi">Cover+title: treo thanh lợi ích phong cách SEA; tiêu đề có “Mua 1 tặng 5 / Freeship / sáng 7 ngày”.</span></li>
+      <li><span class="cn">开场10秒钩子：2分钟领30K + 今天Freeship + 10分钟内下单送5。</span><span class="vi">Móc 10s đầu: ở lại 2' nhận mã 30K + hôm nay Freeship + chốt trong 10' tặng 5.</span></li>
+      <li><span class="cn">Pin节奏：每3–5分钟换一次，先口播再Pin，反复提示“点左下角购买”。</span><span class="vi">Nhịp Pin: đổi mỗi 3–5’, nói trước rồi mới Pin, nhắc “bấm mua ở góc trái”.</span></li>
+      <li><span class="cn">强CTA锚点：15’/35’/55’/85’做倒计时与数量提醒。</span><span class="vi">CTA mạnh: mốc 15’/35’/55’/85’ đếm ngược + nhắc số suất còn.</span></li>
+      <li><span class="cn">解除顾虑：COD/预计3–5天/敏感肌可用/正确用法（3滴早晚）。</span><span class="vi">Gỡ lo ngại: COD/giao 3–5 ngày/da nhạy cảm dùng được/cách dùng 3 giọt sáng–tối.</span></li>
+      <li><span class="cn">搜索词：反复出现“dưỡng sáng/giảm thâm/không đều màu/serum C/nhạy cảm dùng được”。</span><span class="vi">Từ khóa: lặp “dưỡng sáng/giảm thâm/da không đều màu/serum C/nhạy cảm dùng được”.</span></li>
     </ul>
   </div>
 
   <div class="card">
-    <h2>🗣 快捷口播 / Lời thoại nhanh</h2>
-    <p><b>中：</b>现在 <b>469K</b>、<b>买1送5</b>、<b>免运</b>；点<b>购物袋</b>先<b>加购领30K券</b>，<b>前20单</b>我读名字送面膜5片！</p>
-    <p><b>VI：</b><b>469K</b>, <b>mua 1 tặng 5</b>, <b>Freeship</b>; bấm <b>túi hàng</b> <b>thêm giỏ nhận mã 30K</b>, <b>20 đơn đầu</b> mình đọc tên tặng mini!</p>
-    <p class="note">（内部口径，已剔除刷单数据）/ Nội bộ, đã loại đơn ảo.</p>
+    <h2>中控分工 | Nhiệm vụ trung tâm</h2>
+    <ul>
+      <li><span class="cn">循环3句回复：Freeship còn 15 suất / 2’ nhận mã 30K, chốt trong 10’ tặng 5 / Nhạy cảm dùng được。</span><span class="vi">Lặp 3 câu: Freeship còn 15 suất / 2’ nhận mã 30K, chốt trong 10’ tặng 5 / Da nhạy cảm dùng được.</span></li>
+      <li><span class="cn">30秒内拉私信，发一键话术+购物车链接。</span><span class="vi">Kéo inbox trong 30s, gửi kịch bản sẵn + link giỏ hàng.</span></li>
+      <li><span class="cn">盯库存/券：异常立刻刷新并同步主播改口。</span><span class="vi">Theo dõi kho/mã: bất thường làm mới ngay và báo MC đổi lời.</span></li>
+    </ul>
   </div>
 
-  <div class="btns">
-    <a class="btn" href="#" onclick="window.print();return false;">🖨️ 打印 / Xuất PDF</a>
+  <div class="card">
+    <h2>主播执行 | Checklist cho MC</h2>
+    <ul>
+      <li><span class="cn">开播前：贴纸侧栏+标题+Pin精华到位。</span><span class="vi">Trước khi lên sóng: dán thanh lợi ích + tiêu đề + Pin serum sẵn.</span></li>
+      <li><span class="cn">0–3分钟：只讲福利与亮肤，不展开配方。</span><span class="vi">0–3 phút: chỉ nói quyền lợi & làm sáng, chưa nói công thức.</span></li>
+      <li><span class="cn">每次换Pin：先说再换；每10–15分钟做一次问答快闪。</span><span class="vi">Mỗi lần đổi Pin: nói trước rồi đổi; mỗi 10–15’ làm Q&A nhanh.</span></li>
+      <li><span class="cn">结束前5分钟：福利复盘+最后10’倒计时，Pin回精华不再换品。</span><span class="vi">Trước khi kết 5’: nhắc lại quyền lợi + đếm ngược 10’, Pin về serum và không đổi sản phẩm.</span></li>
+    </ul>
   </div>
+
+  <div class="card">
+    <h2>明日目标 | Mục tiêu phiên sau</h2>
+    <ul>
+      <li><span class="cn">进房率 ≥ 6%，平均停留 ≥ 2 分钟。</span><span class="vi">Vào phòng ≥ 6%, thời gian xem TB ≥ 2 phút.</span></li>
+      <li><span class="cn">点击率 13–15%，加购 ≥ 12，成单 ≥ 3–5。</span><span class="vi">CTR 13–15%, thêm vào giỏ ≥ 12, đơn thành công ≥ 3–5.</span></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>固定话术 | Câu thoại cố định</h2>
+    <ul>
+      <li><span class="cn">今天在直播间待 2 分钟领 30K，且全越南包邮；买 1 送 5，敏感肌可用，想 7 天提亮现在点左下角下单。</span><span class="vi">Hôm nay ở lại 2 phút nhận mã 30K, Freeship toàn quốc; mua 1 tặng 5, da nhạy cảm dùng được, muốn sáng 7 ngày bấm mua góc trái nhé.</span></li>
+      <li><span class="cn">15 分钟一到：还有 15 个名额 + 倒计时 10 分钟，抓紧下单。</span><span class="vi">Đến mốc 15’: còn 15 suất + đếm ngược 10 phút, chốt đơn nhanh nhé.</span></li>
+    </ul>
+  </div>
+
+  <footer>ELT Vietnam • TikTok Shop • Bilingual Summary</footer>
 </div>
 </body>
 </html>
