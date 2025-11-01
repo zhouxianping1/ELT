@@ -1,31 +1,30 @@
 // middleware.js
 import { NextResponse } from "next/server";
 
-// 密码：环境变量 SITE_PASS 优先，否则用固定值
+// 固定密码（也可以用环境变量 SITE_PASS）
 const PASS = process.env.SITE_PASS ?? "buzhidao";
 
 export function middleware(request) {
-  // 解析当前请求的 URL
-  const { searchParams } = new URL(request.url);
-  const pass = searchParams.get("pass");
+  const url = request.nextUrl;
+  const pass = url.searchParams.get("pass");
 
-  // 如果带了正确密码就放行
+  // 带了正确密码就放行
   if (pass === PASS) {
     return NextResponse.next();
   }
 
-  // 否则返回一个非常简单的页面（纯文本/超简单 HTML）
+  // 没带就出一个超简单的输入页
   const html = `
     <!doctype html>
     <html>
       <head><meta charset="utf-8" /><title>Protected</title></head>
-      <body style="font-family:sans-serif;padding:24px;">
-        <h2>🔒 需要访问密码 / Cần mật khẩu</h2>
+      <body style="font-family:sans-serif;padding:24px;max-width:420px;">
+        <h2>🔒 需要密码才能访问</h2>
         <form method="GET" style="margin-top:16px;">
           <input name="pass" placeholder="buzhidao" style="padding:6px 10px;" />
           <button type="submit" style="padding:6px 10px;margin-left:6px;">进入</button>
         </form>
-        <p style="margin-top:8px;color:#666;">Mật khẩu mặc định: <b>buzhidao</b></p>
+        <p style="margin-top:10px;color:#666;">默认密码：<b>buzhidao</b></p>
       </body>
     </html>
   `;
@@ -38,7 +37,10 @@ export function middleware(request) {
   });
 }
 
-// 让所有路径都经过这个中间件
+// ❗❗ 只拦真正的页面，放过内部资源/接口/静态文件
 export const config = {
-  matcher: ["/:path*"],
+  matcher: [
+    // 拦所有页面…
+    "/((?!_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml|api|vercel).*)",
+  ],
 };
