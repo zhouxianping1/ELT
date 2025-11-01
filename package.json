@@ -1,5 +1,5 @@
 {
-  "name": "jt",
+  "name": "elt",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,5 +11,10 @@
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"
+  },
+  "devDependencies": {
+    "typescript": "latest",
+    "@types/react": "latest",
+    "@types/node": "latest"
   }
 }
