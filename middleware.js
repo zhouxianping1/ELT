@@ -1,19 +1,19 @@
 // middleware.js
 import { NextResponse } from "next/server";
 
-// 固定密码（也可以用环境变量 SITE_PASS）
+// 这里写你的密码
 const PASS = process.env.SITE_PASS ?? "buzhidao";
 
 export function middleware(request) {
   const url = request.nextUrl;
   const pass = url.searchParams.get("pass");
 
-  // 带了正确密码就放行
+  // 密码对了 → 放行
   if (pass === PASS) {
     return NextResponse.next();
   }
 
-  // 没带就出一个超简单的输入页
+  // 密码不对 → 返回一个极简 HTML（不用 __dirname、不用 fs、不用引别的文件）
   const html = `
     <!doctype html>
     <html>
@@ -37,8 +37,7 @@ export function middleware(request) {
   });
 }
 
-// ❗❗ 只拦真正的页面，放过内部资源/接口/静态文件
+// ❗只拦首页，别的系统路径一律放行，防止再 500
 export const config = {
   matcher: ["/"],
 };
-
