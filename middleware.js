@@ -1,14 +1,17 @@
+// middleware.js
 import { NextResponse } from "next/server";
 
 const PASS = process.env.SITE_PASS || "buzhidao";
 
-export function middleware(req: Request) {
+export function middleware(req) {
   const url = new URL(req.url);
 
+  // 带了正确密码就放行
   if (url.searchParams.get("pass") === PASS) {
     return NextResponse.next();
   }
 
+  // 否则返回输入密码页
   return new NextResponse(
     `
     <html>
@@ -32,6 +35,7 @@ export function middleware(req: Request) {
   );
 }
 
+// 全站都要经过这个中间件
 export const config = {
   matcher: ["/:path*"],
 };
