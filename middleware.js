@@ -39,8 +39,6 @@ export function middleware(request) {
 
 // ❗❗ 只拦真正的页面，放过内部资源/接口/静态文件
 export const config = {
-  matcher: [
-    // 拦所有页面…
-    "/((?!_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml|api|vercel).*)",
-  ],
+  matcher: ["/"],
 };
+
