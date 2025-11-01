@@ -3,7 +3,93 @@ export default function HomePage() {
   return (
     <main style={{ padding: 24 }}>
       <h1>ELT 真正的页面</h1>
-      <p>这里写你原来的内容，或者把 index.html 的内容搬过来。</p>
+      <p>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>ELT · 今日复盘（去刷单）/ Báo cáo hôm nay (loại đơn ảo)</title>
+<style>
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Inter","PingFang SC","Microsoft YaHei",system-ui,sans-serif;background:#0b1220;color:#e5eefb}
+.wrap{max-width:820px;margin:0 auto;padding:14px}
+.card{background:#0f172a;border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px;margin:12px 0;box-shadow:0 10px 30px rgba(2,6,23,.35)}
+h1{font-size:18px;margin:0 0 8px 0}
+h2{font-size:16px;margin:0 0 10px 0}
+h3{font-size:14px;margin:10px 0 8px 0;color:#cbd5e1}
+p,li{font-size:14px;line-height:1.6;margin:6px 0}
+.badge{display:inline-block;font-size:11px;color:#065f46;background:#ecfdf5;border:1px solid #6ee7b7;border-radius:999px;padding:2px 8px;margin-left:8px}
+.kpi{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.kpi .b{background:#111827;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:10px}
+.kpi .b b{font-size:16px;color:#60a5fa}
+ul{padding-left:18px}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.btn{background:#2563eb;border:1px solid #60a5fa;color:#fff;border-radius:999px;padding:8px 12px;font-size:14px;text-decoration:none;display:inline-block;box-shadow:0 6px 18px rgba(37,99,235,.45)}
+.note{color:#94a3b8;font-size:12px}
+.sep{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);margin:12px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <h1>ELT · 今日复盘（去刷单口径）<span class="badge">Báo cáo hôm nay · loại đơn ảo</span></h1>
+    <div class="kpi">
+      <div class="b"><div>真实成交 / Đơn thật</div><b>0 单 · 0₫</b></div>
+      <div class="b"><div>观看 / Hiển thị – Người xem</div><b>≈9.39K · 324</b></div>
+      <div class="b"><div>平均停留 / TG xem TB</div><b>57s <span class="note">（目标 ≥90s）</span></b></div>
+      <div class="b"><div>CTR</div><b>14.44% <span class="note">（目标 ≥18%）</span></b></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🧭 结论 / Kết luận</h2>
+    <ul>
+      <li>能吸引路过，但<strong>首屏钩子弱</strong> → 进房少 / 停留短 / 下单低。</li>
+      <li><strong>搜索流量质量最好</strong>（量小，需放大）。</li>
+    </ul>
+    <ul>
+      <li>Ảnh/tiêu đề hút nhưng <strong>móc câu 3–30s đầu yếu</strong> → vào phòng & giữ chân kém.</li>
+      <li><strong>Search chất lượng tốt</strong> nhưng còn ít → cần mở rộng.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>🚀 下一场做 5 件事 / 5 việc phải làm</h2>
+    <ol>
+      <li><b>首屏30秒强钩子 / Hook 30s:</b> 
+        <div class="sep"></div>
+        <div>中：<i>现在 <b>469K</b>，<b>买1送5</b>，<b>免运</b>；点<b>购物袋</b>先<b>加购领30K券</b>，<b>前20单</b>我读名字送旅行装！</i></div>
+        <div>VI：<i><b>469K</b>, <b>mua 1 tặng 5</b>, <b>Freeship</b>; bấm <b>túi hàng</b> <b>thêm giỏ nhận mã 30K</b>, <b>20 đơn đầu</b> mình đọc tên tặng mini!</i></div>
+      </li>
+      <li><b>10 分钟一轮节奏 / Nhịp 10’:</b> 功效证据 → 价格&赠品实拍 → 社证/库存 → 强 CTA。</li>
+      <li><b>PIN 常亮 / PIN thường trực:</b> 主品 60–120s，插次品 20–30s。</li>
+      <li><b>评论&弹幕循环 / Comment:</b> “输入 <b>ELT</b> 领 30K / Nhập <b>ELT</b> nhận 30K”；“前20单送旅行装 / 20 đơn đầu tặng mini”。</li>
+      <li><b>放大搜索 / Mở rộng Search:</b> 标题+口播关键词；短视频结尾强引导“đang LIVE – vào nhận quà”。</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>🎯 明日真实 KPI / KPI thật</h2>
+    <ul>
+      <li>平均停留 ≥ <b>90s</b> · CTR ≥ <b>18%</b> · 加购率 ≥ <b>3%</b></li>
+      <li>关注率 ≥ <b>0.6%</b> · 下单率 ≥ <b>2%</b></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>🗣 快捷口播 / Lời thoại nhanh</h2>
+    <p><b>中：</b>现在 <b>469K</b>、<b>买1送5</b>、<b>免运</b>；点<b>购物袋</b>先<b>加购领30K券</b>，<b>前20单</b>我读名字送面膜5片！</p>
+    <p><b>VI：</b><b>469K</b>, <b>mua 1 tặng 5</b>, <b>Freeship</b>; bấm <b>túi hàng</b> <b>thêm giỏ nhận mã 30K</b>, <b>20 đơn đầu</b> mình đọc tên tặng mini!</p>
+    <p class="note">（内部口径，已剔除刷单数据）/ Nội bộ, đã loại đơn ảo.</p>
+  </div>
+
+  <div class="btns">
+    <a class="btn" href="#" onclick="window.print();return false;">🖨️ 打印 / Xuất PDF</a>
+  </div>
+</div>
+</body>
+</html></p>
     </main>
   );
 }
