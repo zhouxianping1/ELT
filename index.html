@@ -1,142 +1,106 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
-<title>直播复盘｜Tổng kết livestream — 2025-11-04</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+<title>直播复盘｜Tổng kết livestream — 2025-11-05</title>
 <style>
-  :root {
-    --bg:#0f1115; --card:#151821; --muted:#9aa4b2; --acc:#34d399; --red:#ef4444; --yellow:#f59e0b;
-  }
-  * { box-sizing:border-box; }
-  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif; background:var(--bg); color:#e5e7eb; }
-  .wrap { max-width:960px; margin:0 auto; padding:20px; }
-  h1,h2,h3 { margin:16px 0 8px; }
-  h1 { font-size:22px; line-height:1.25; }
-  h2 { font-size:18px; border-left:3px solid var(--acc); padding-left:10px; }
-  p,li { line-height:1.6; }
-  .card { background:var(--card); border:1px solid #232737; border-radius:14px; padding:16px; margin:14px 0; }
-  .tag { display:inline-block; padding:3px 8px; border-radius:999px; background:#1f2937; color:#cbd5e1; font-size:12px; margin-right:6px; }
-  .kpi { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
-  .kpi .item { background:#10131a; border:1px solid #22283a; border-radius:12px; padding:12px; }
-  .kpi b { font-size:18px; color:#fff; }
-  .muted { color:var(--muted); }
-  .ok { color:var(--acc); }
-  .warn { color:var(--yellow); }
-  .bad { color:#f87171; }
-  .code { font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,"Liberation Mono","Courier New", monospace; background:#0b0e14; padding:2px 6px; border-radius:6px; }
-  ul { padding-left:18px; }
-  .footer { text-align:center; color:#94a3b8; font-size:12px; margin-top:24px; }
-  @media (min-width:720px) { .kpi { grid-template-columns:repeat(4,1fr);} } 
+:root{
+  --bg:#0f1220;--card:#161a2b;--muted:#8a93ad;--pri:#ffb703;--ok:#2dd4bf;--bad:#ef4444;--line:#232844;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:#fff;font:14px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
+.wrapper{max-width:980px;margin:0 auto;padding:20px}
+.tag{display:inline-block;padding:6px 10px;border-radius:8px;background:linear-gradient(135deg,#3b82f6, #06b6d4);font-weight:700}
+.h1{font-size:22px;font-weight:800;margin:12px 0 6px}
+.meta{color:var(--muted);margin-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media (min-width:680px){.grid{grid-template-columns:repeat(4,1fr)}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+.kpi .k{color:var(--muted);font-size:12px}
+.kpi .v{display:block;font-weight:800;font-size:22px;margin-top:6px}
+.badge{display:inline-block;font-size:12px;color:#111;background:var(--pri);border-radius:999px;padding:3px 8px;margin-left:6px}
+.section{margin-top:18px}
+.section .title{font-weight:800;margin:4px 0 10px}
+.list{margin:0;padding:0 0 0 18px}
+.list li{margin:6px 0}
+.ok{color:var(--ok);font-weight:700}
+.bad{color:var(--bad);font-weight:700}
+.muted{color:var(--muted)}
+.tip{background:#0b1324;border:1px dashed var(--line);border-radius:12px;padding:12px;margin-top:12px}
+.hr{height:1px;background:var(--line);margin:16px 0}
+.small{font-size:12px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.chip{background:#0c1730;border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:12px}
+.em{color:#ffd166}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <h1>📊 直播复盘｜Tổng kết livestream</h1>
-  <div class="card">
-    <span class="tag">CN-VI</span>
-    <span class="tag">ELT 美妆</span>
-    <span class="tag">2025-11-04</span>
-    <p class="muted">目标：稳住停留与互动，打通承接转化（点击→加购→下单）。<br/>Mục tiêu: Giữ chân + tương tác, mở khoá chuyển đổi (click→thêm giỏ→đặt hàng).</p>
-  </div>
+  <div class="wrapper">
+    <span class="tag">ELT LIVE Recap · Chỉ tổng hợp dữ liệu LIVE</span>
+    <div class="h1">直播复盘｜Tổng kết livestream — 2025-11-05</div>
+    <div class="meta">面向：老板 / 运营 / 主播 / 中控 · Dành cho: Boss / vận hành / MC / điều phối</div>
 
-  <h2>核心数据｜Số liệu chính</h2>
-  <div class="card">
-    <div class="kpi">
-      <div class="item"><div class="muted">浏览人数｜Người xem</div><b>153</b></div>
-      <div class="item"><div class="muted">平均停留｜Th.gian ở lại TB</div><b>1m20s</b></div>
-      <div class="item"><div class="muted">曝光｜Impression</div><b>5.88k</b></div>
-      <div class="item"><div class="muted">点击率｜CTR</div><b>5.18%</b></div>
-      <div class="item"><div class="muted">评论率｜Tỷ lệ bình luận</div><b>20.1%</b></div>
-      <div class="item"><div class="muted">关注率｜Follow-rate</div><b>0.53%</b></div>
-      <div class="item"><div class="muted">加购/下单｜Thêm giỏ/Đơn</div><b>0 / 0</b></div>
-      <div class="item"><div class="muted">商品点击（代表）｜Click theo SP</div><b>Serum 1.86% · Mask 2.44%</b></div>
+    <!-- 核心KPI（仅直播） -->
+    <div class="grid section">
+      <div class="card kpi"><div class="k">浏览人数｜Người xem</div><span class="v">231</span></div>
+      <div class="card kpi"><div class="k">平均停留｜Thời lượng TB</div><span class="v">54s</span></div>
+      <div class="card kpi"><div class="k">曝光｜Impressions</div><span class="v">3.22k</span></div>
+      <div class="card kpi"><div class="k">点击率｜CTR</div><span class="v">11.69%</span></div>
+      <div class="card kpi"><div class="k">评论率｜Tỷ lệ bình luận</div><span class="v">9.7%</span></div>
+      <div class="card kpi"><div class="k">关注率｜Follow-rate</div><span class="v">0.84%</span></div>
+      <div class="card kpi"><div class="k">加购 / 下单｜Thêm giỏ / Đơn</div><span class="v">0 / 0</span></div>
+      <div class="card kpi"><div class="k">商品点击（代表）｜Click theo SP</div><span class="v">Serum 1.69% · Mask 6.06%</span></div>
     </div>
-    <p><b>结论｜Kết luận：</b><span class="warn">能看但不买</span> → 流量OK，问题在 <span class="code">商品页承接 / 信任 / 优惠触发</span>.<br/>
-    <span class="muted">Có xem nhưng không mua → Tắc ở trang SP / niềm tin / kích hoạt ưu đãi.</span></p>
-  </div>
 
-  <h2>立即优化 6 件事｜6 việc cần làm ngay</h2>
-  <div class="card">
-    <ol>
-      <li>固定节奏：<b>演示→口令抽奖→讲优惠→倒计时下单</b>（每10–12分钟）。<br/>Nhịp: <b>Demo → Giveaway → Ưu đãi → Đếm ngược chốt</b> (mỗi 10–12’).</li>
-      <li>Pin顺序：<span class="code">精华50ml → 面膜5片 → 乳液175ml → 套装</span>（最多4个）。<br/>Thứ tự ghim: <span class="code">Serum → Mask → Emulsion → Combo</span> (tối đa 4 SP).</li>
-      <li>优惠三件套：券 -20k~-30k；≥199k免运；口令价 <span class="code">ELT LIVE</span> -10k。<br/>Bộ ưu đãi: Voucher -20k~-30k; Freeship ≥199k; Mật khẩu <span class="code">ELT LIVE</span> -10k.</li>
-      <li>信任三连：素颜近景质地；D1→D7同机位对比；固定口播 COD+退换。<br/>Niềm tin: Cận bôi thật; So sánh D1–D7; Nói rõ COD & đổi trả.</li>
-      <li>评论驱动：改为<b>功能性提问</b>与口令抽奖结合。<br/>Bình luận có mục tiêu + giveaway khẩu lệnh.</li>
-      <li>主播结尾：数到 <b>1–2–3</b> 指向红色按钮；现场拆封 1 单。<br/>Cuối đoạn đếm 1–2–3 chỉ nút mua; mở 1 đơn mẫu.</li>
-    </ol>
-  </div>
+    <div class="tip">
+      ⚠️ 冷启动期数据波动较大，本页<strong>仅汇总直播数据</strong>，用于趋势参考；广告学习未稳定前，指标不作绝对判断。<br/>
+      ⚠️ Giai đoạn learning dao động mạnh. Trang này <strong>chỉ tổng hợp số liệu LIVE</strong> để tham khảo xu hướng.
+    </div>
 
-  <h2>FAQ（话术）｜Câu hỏi thường gặp</h2>
-  <div class="card">
-    <ul>
-      <li><b>为什么0下单？</b> 价格/邮费/不确定效果/不会用未解决。<br/>Vì sao 0 đơn? Chưa xử lý Giá/ship/Niềm tin/Cách dùng.</li>
-      <li><b>要不要加券？</b> 要，发小券 -20k~-30k + 口令减，拉首单。<br/>Có nên voucher? Có – nhỏ để kéo đơn đầu.</li>
-    </ul>
-  </div>
+    <!-- 一句话结论 -->
+    <div class="section card">
+      <div class="title">一句话结论｜Kết luận nhanh</div>
+      <ul class="list">
+        <li>进房稳定但<strong class="bad">成交为 0</strong>；CTR 高，说明封面与话术能吸引点击，但<strong>成交链路断在商品页/优惠触发</strong>。<br/>
+            Vào phòng ổn nhưng <strong class="bad">0 đơn</strong>; CTR cao ⇒ cover & lời mở đầu tốt, nhưng <strong>đứt ở trang SP/kích hoạt ưu đãi</strong>.</li>
+      </ul>
+      <div class="chips">
+        <span class="chip">流量来源：推荐流≈76%｜Nguồn đề xuất ~76%</span>
+        <span class="chip">>1min观看：28｜Lượt xem >1’ : 28</span>
+      </div>
+    </div>
 
-  <h2>直播话术｜Lời thoại trong live</h2>
-  <div class="card">
-    <p><b>开场3分钟｜3 phút mở đầu</b><br/>
-    Sáng C – Tối A 用法：2泵→5点→轻拍5秒；D1→D7同机位更均匀更服帖。<br/>
-    Cách dùng Sáng C – Tối A: 2 pump→5 điểm→vỗ 5s; So sánh D1–D7 cùng góc.</p>
-    <p><b>价格与邮费｜Giá & ship</b><br/>
-    今晚券 -30k，199k免运，COD 全国，不满意可退。<br/>
-    Tối nay voucher -30k, freeship ≥199k, COD toàn quốc, không ưng hoàn.</p>
-    <p><b>下单指引｜Hướng dẫn chốt</b><br/>
-    现在数 1–2–3，点下面红色按钮！<br/>Bây giờ đếm 1–2–3, bấm nút đỏ bên dưới!</p>
-    <p class="muted">右下小字：效果因人而异｜Kết quả tuỳ cơ địa.</p>
-  </div>
+    <!-- 24小时动作清单（沿用原逻辑，只说“直播侧”） -->
+    <div class="section card">
+      <div class="title">接下来 24h｜Hành động 24h</div>
+      <ol class="list">
+        <li><b>开播前 3 分钟统一“黄金话术”</b>：①优惠一口价/赠品一句话说清；②强引导“打字+点购物车”；③承诺“下单即私信补券/补赠”。<br/>
+            <span class="muted">Mở đầu 3’ chuẩn: ưu đãi nói rõ – kêu gọi CMT + bấm giỏ – cam kết inbox tặng mã.</span></li>
+        <li><b>商品页三件套</b>：首图加“ƯU ĐÃI HÔM NAY”贴条；要点 3–4 行越语；规格/正品/运费写清。<br/>
+            <span class="muted">Trang SP: nhãn ưu đãi nổi – bullet ngắn – rõ quy cách/chính hãng/ship.</span></li>
+        <li><b>中控节奏</b>：每 3–5 分钟循环弹三句模板（优惠/库存/倒计时）；评论区 15s 内必回；置顶当前货车。<br/>
+            <span class="muted">Điều phối: 3–5’ lặp 3 câu – rep CMT <15s – ghim SP đang chốt.</span></li>
+        <li><b>主播演示</b>：做 30s 真实上脸/手背对比；口播“敏感肌可用/无香”；强提示“今晚下单有赠”。<br/>
+            <span class="muted">MC demo 30s – nói rõ dùng cho da nhạy cảm – nhấn mạnh quà hôm nay.</span></li>
+      </ol>
+    </div>
 
-  <h2>评论口令（轮换）｜Khẩu lệnh bình luận</h2>
-  <div class="card">
-    <ul>
-      <li><span class="code">DA SÁNG MỊN 7 NGÀY – đã theo dõi</span>（已关注+口令进抽）</li>
-      <li><span class="code">HỎI CÁCH DÙNG – tư vấn riêng</span>（想要用法）</li>
-      <li><span class="code">ELT LIVE – nhận -10k</span>（口令减）</li>
-    </ul>
-  </div>
+    <!-- 直播现场固定口播（保留不变） -->
+    <div class="section card">
+      <div class="title">直播固定口播｜Mẫu thoại cố định</div>
+      <ul class="list">
+        <li>“今晚买精华 <span class="em">tặng 5 mask</span>，数量有限，到点就关～ 点下方购物车 là thấy ưu đãi nha！”<br/>
+            “Hôm nay mua serum <span class="em">tặng 5 mask</span>, số lượng có hạn, hết giờ đóng ưu đãi — bấm giỏ xem ngay nha!”</li>
+        <li>“敏感肌可用、无香精、<span class="em">hàng chính hãng</span>，不满意可退～”<br/>
+            “Dùng được cho da nhạy cảm, <span class="em">chính hãng</span>, không ưng có thể đổi/trả nha!”</li>
+        <li>“打字 1 我发 mã giảm 30K；下单 tôi nhắn riêng xác nhận quà tặng nha～”<br/>
+            “CMT số 1 nhận mã 30K; đặt đơn mình inbox xác nhận quà luôn nha~”</li>
+      </ul>
+    </div>
 
-  <h2>商品页承接（10分钟内能改）｜Trang SP</h2>
-  <div class="card">
-    <ul>
-      <li>主图2：加“早C晚A 2泵→5点→轻拍”步骤图。<br/>Ảnh 2: Thêm quy trình Sáng C – Tối A.</li>
-      <li>长图：D1→D7 同机位对比＋“个体差异”声明。<br/>Ảnh dài: So sánh D1–D7 + tuyên bố tuỳ cơ địa.</li>
-      <li>规格：明确 COD/退换/发货时效。<br/>Thông số: COD/đổi trả/thời gian giao.</li>
-    </ul>
+    <div class="hr"></div>
+    <div class="small">版本：LIVE-only · 冷启动期（Learning）</div>
   </div>
-
-  <h2>Pin 节奏（每10–12分钟）｜Nhịp ghim</h2>
-  <div class="card">
-    <ol>
-      <li>精华 50ml（用途+用法）｜Serum 50ml (công dụng + cách dùng)</li>
-      <li>口令抽奖 1 名｜Giveaway 1 phần</li>
-      <li>面膜 5 片（肤感+加购券）｜Mask 5 miếng (cảm giác da + voucher add-to-cart)</li>
-      <li>精华+面膜套装拉客单｜Combo Serum+Mask tăng AOV</li>
-    </ol>
-  </div>
-
-  <h2>复盘阈值（场内判断）｜Ngưỡng quyết định</h2>
-  <div class="card">
-    <ul>
-      <li>商品点击率 <b>2%</b> 连续10分钟 → 换讲法或换商品卡。<br/>CTR theo SP <b>2%</b> trong 10’ → đổi lời hoặc đổi thẻ.</li>
-      <li>关注率 <b>1%</b> → 加一轮“新关注送面膜”抽奖。<br/>Follow-rate <b>1%</b> → thêm vòng giveaway cho new follow.</li>
-      <li>平均停留 <b>1m</b> → 立刻上“近景上脸+60s口令价倒计时”。<br/>Time ở lại <b>1m</b> → vào “bôi cận + đếm ngược 60s”.</li>
-    </ul>
-  </div>
-
-  <h2>明天开播前 5 分钟清单｜Checklist 5 phút trước live</h2>
-  <div class="card">
-    <ul>
-      <li>券 -30k；免运 ≥199k；口令 <span class="code">ELT LIVE</span> -10k。</li>
-      <li>预先 Pin: Serum→Mask→Emulsion→Combo（≤4个）。</li>
-      <li>置顶：必须 关注 + 口令 才参与；开奖需在场。</li>
-      <li>机位：近景无滤镜；桌面留 1 份可“现场拆封”。</li>
-    </ul>
-  </div>
-
-  <div class="footer">© ELT VN Live Ops – Bilingual CN-VI recap</div>
-</div>
 </body>
 </html>
