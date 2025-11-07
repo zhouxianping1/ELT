@@ -1,97 +1,189 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
-<title>直播复盘｜Tổng kết livestream — 2025-11-06</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TikTok Shop 直播复盘｜Báo cáo livestream</title>
 <style>
-:root{ --bg:#0f1220;--card:#161a2b;--muted:#8a93ad;--pri:#ffb703;--ok:#2dd4bf;--bad:#ef4444;--line:#232844; }
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--bg);color:#fff;font:14px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
-.wrapper{max-width:980px;margin:0 auto;padding:20px}
-.tag{display:inline-block;padding:6px 10px;border-radius:8px;background:linear-gradient(135deg,#3b82f6, #06b6d4);font-weight:700}
-.h1{font-size:22px;font-weight:800;margin:12px 0 6px}
-.meta{color:var(--muted);margin-bottom:12px}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-@media (min-width:680px){.grid{grid-template-columns:repeat(4,1fr)}}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
-.kpi .k{color:var(--muted);font-size:12px}
-.kpi .v{display:block;font-weight:800;font-size:22px;margin-top:6px}
-.badge{display:inline-block;font-size:12px;color:#111;background:var(--pri);border-radius:999px;padding:3px 8px;margin-left:6px}
-.section{margin-top:18px}
-.section .title{font-weight:800;margin:4px 0 10px}
-.list{margin:0;padding:0 0 0 18px}
-.list li{margin:6px 0}
-.ok{color:var(--ok);font-weight:700}
-.bad{color:var(--bad);font-weight:700}
-.muted{color:var(--muted)}
-.tip{background:#0b1324;border:1px dashed var(--line);border-radius:12px;padding:12px;margin-top:12px}
-.hr{height:1px;background:var(--line);margin:16px 0}
-.small{font-size:12px;color:var(--muted)}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
-.chip{background:#0c1730;border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:12px}
-.em{color:#ffd166}
+  :root {
+    --bg:#0f1115;
+    --card:#151823;
+    --text:#e8ecf1;
+    --muted:#a7b0c0;
+    --accent:#4cc9f0;
+    --ok:#21c55d;
+    --warn:#f39c12;
+    --bad:#ef4444;
+  }
+  html,body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-height:1.6;margin:0;padding:0}
+  .wrap{max-width:980px;margin:0 auto;padding:20px}
+  h1,h2,h3{line-height:1.25;margin:0 0 12px}
+  h1{font-size:28px}
+  h2{font-size:22px;margin-top:24px;padding-top:12px;border-top:1px solid #23283a}
+  .card{background:var(--card);border:1px solid #23283a;border-radius:16px;padding:18px;margin:14px 0}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+  .kpi{background:#0f1422;border:1px solid #23283a;border-radius:12px;padding:12px}
+  .kpi b{display:block;font-size:18px}
+  .tag{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;margin-left:6px;background:#1d2336;color:var(--muted)}
+  .ok{color:var(--ok)}
+  .warn{color:var(--warn)}
+  .bad{color:var(--bad)}
+  ul{margin:8px 0 8px 18px}
+  li{margin:4px 0}
+  .cn{display:block}
+  .vn{display:block;color:var(--muted)}
+  .footer{margin:28px 0 12px;color:#8fa1b5;font-size:12px}
 </style>
 </head>
 <body>
-<div class="wrapper">
-  <span class="tag">ELT LIVE Recap · Chỉ tổng hợp dữ liệu LIVE</span>
-  <div class="h1">直播复盘｜Tổng kết livestream — 2025-11-06</div>
-  <div class="meta">面向：老板 / 运营 / 主播 / 中控 · Dành cho: Boss / vận hành / MC / điều phối</div>
-
-  <!-- 核心KPI（仅直播） -->
-  <div class="grid section">
-    <div class="card kpi"><div class="k">浏览人数｜Người xem</div><span class="v">276</span></div>
-    <div class="card kpi"><div class="k">平均停留｜Thời lượng TB</div><span class="v">18s</span></div>
-    <div class="card kpi"><div class="k">曝光｜Impressions</div><span class="v">6.51k</span></div>
-    <div class="card kpi"><div class="k">点击率｜CTR</div><span class="v">7.61%</span></div>
-
-    <div class="card kpi"><div class="k">评论率｜Tỷ lệ bình luận</div><span class="v">5.11%</span></div>
-    <div class="card kpi"><div class="k">关注率｜Follow-rate</div><span class="v">1.09%</span></div>
-    <div class="card kpi"><div class="k">加购 / 下单｜Thêm giỏ / Đơn</div><span class="v">— / 2</span></div>
-    <div class="card kpi"><div class="k">商品点击（代表）｜Click theo SP</div><span class="v">Serum 2.83% · Sửa rửa 2.08%</span></div>
+<div class="wrap">
+  <h1>今日直播复盘<span class="tag">Bản tổng kết livestream song ngữ</span></h1>
+  <div class="card">
+    <span class="cn">日期：2025-11-07 10:34</span>
+    <span class="vn">Thời gian tạo báo cáo: 2025-11-07 10:34</span>
   </div>
 
-  <div class="tip">
-    ⚠️ 冷启动期数据波动较大，本页<strong>仅汇总直播数据</strong>，用于趋势参考；广告学习未稳定前，指标不作绝对判断。<br/>
-    ⚠️ Giai đoạn learning dao động mạnh. Trang này <strong>chỉ tổng hợp số liệu LIVE</strong> để tham khảo xu hướng.
+  <h2>一、定义｜Định nghĩa</h2>
+  <div class="card">
+    <span class="cn">本次账号：thich.lam.dep1；时长约 2h23m。</span>
+    <span class="vn">Tài khoản: thich.lam.dep1; thời lượng ~2 giờ 23 phút.</span>
+
+    <div class="grid">
+      <div class="kpi">
+        <span class="cn"><b>直接 GMV：742,146₫</b></span>
+        <span class="vn">Doanh thu trực tiếp: 742.146₫</span>
+      </div>
+      <div class="kpi">
+        <span class="cn"><b>曝光：15.7K</b></span>
+        <span class="vn">Hiển thị: 15.7K</span>
+      </div>
+      <div class="kpi">
+        <span class="cn"><b>观看人数：357</b></span>
+        <span class="vn">Lượt xem: 357</span>
+      </div>
+      <div class="kpi">
+        <span class="cn"><b>成交：4 单</b></span>
+        <span class="vn">Đơn hàng: 4</span>
+      </div>
+      <div class="kpi">
+        <span class="cn"><b>点击率 CTR：<span class="ok">8.12%</span></b></span>
+        <span class="vn">CTR: <span class="ok">8.12%</span></span>
+      </div>
+      <div class="kpi">
+        <span class="cn"><b>下单率 CTOR：<span class="bad">1.12%</span></b></span>
+        <span class="vn">Tỷ lệ đặt hàng (CTOR): <span class="bad">1.12%</span></span>
+      </div>
+    </div>
+
+    <span class="cn">主推商品为：ELT Vita‑Youth Serum 50ml，贡献主要 GMV。</span>
+    <span class="vn">Sản phẩm chủ lực: ELT Vita‑Youth Serum 50ml, đóng góp phần lớn doanh thu.</span>
   </div>
 
-  <!-- 一句话结论 -->
-  <div class="section card">
-    <div class="title">一句话结论｜Kết luận nhanh</div>
-    <ul class="list">
-      <li>有 **2 单 GMV**，主要来自 **Inbox**；但<strong class="bad">平均停留仅 18s</strong>、商品 CTR 仅 2–3%（代表 SKU），
-        说明<strong>开场抓人与产品卡/PIN 呈现仍偏弱</strong>；需要用「前 10s 钩子 + 大字竖幅卡 + 90s 换 PIN」提升点击与留存。<br/>
-        Có **2 đơn (GMV)**, chủ yếu từ **Inbox**; nhưng <strong class="bad">thời gian xem TB chỉ 18s</strong> và CTR theo SKU ~2–3%,
-        => cần **móc 10s + thẻ dọc chữ to + đổi PIN 90s** để tăng nhấp & giữ chân.
+  <h2>二、怎么用｜Cách dùng (数据解读)</h2>
+  <div class="card">
+    <span class="cn">点击率高于基线，封面与前 3 秒钩子有效；但下单率偏低，成交链路断在“讲解→行动号召”。</span>
+    <span class="vn">CTR cao hơn chuẩn, ảnh bìa & hook 3s hiệu quả; nhưng CTOR thấp, đứt mạch ở “giải thích → kêu gọi hành động”.</span>
+
+    <ul>
+      <li>
+        <span class="cn">流量来源以推荐流为主（≈78%），直播预览 ≈11%，整体推流未形成持续高峰。</span>
+        <span class="vn">Nguồn lưu lượng chủ yếu từ đề xuất (≈78%), xem trước livestream ≈11%, chưa tạo đỉnh bền vững.</span>
+      </li>
+      <li>
+        <span class="cn">用户年龄集中在 18–24 与 25–34，和品牌客群契合。</span>
+        <span class="vn">Nhân khẩu học 18–24 và 25–34 phù hợp với khách hàng mục tiêu.</span>
+      </li>
+      <li>
+        <span class="cn">Serum 50ml 点击率 2.49% 表现最佳；其他品类需更换标题/演示以拉动点击与加购。</span>
+        <span class="vn">Serum 50ml có CTR 2.49% tốt nhất; các SKU khác cần đổi tiêu đề/đoạn demo để kéo click & thêm giỏ.</span>
       </li>
     </ul>
-    <div class="chips">
-      <span class="chip">GMV LIVE：341,073đ｜2 đơn</span>
-      <span class="chip">流量来源：推荐流≈82%｜Nguồn đề xuất ~82%</span>
-      <span class="chip">>1 分钟观看：12｜Lượt xem >1’ : 12</span>
-      <span class="chip">高峰 PIN 时段：~16:40</span>
-    </div>
   </div>
 
-  <!-- 24小时动作清单（延用昨日逻辑，仅直播侧，内容保留） -->
-  <div class="section card">
-    <div class="title">接下来 24h｜Hành động 24h</div>
-    <ol class="list">
-      <li><b>开播前 3 分钟统一“黄金话术”</b>：①优惠一口价/赠品一句话说清；②强引导“打字+点购物车”；③承诺“下单即私信补券/补赠”。<br/>
-        <span class="muted">Mở đầu 3’ chuẩn: ưu đãi rõ – kêu gọi CMT + bấm giỏ – cam kết inbox tặng mã.</span></li>
-      <li><b>商品页三件套</b>：首图加“ƯU ĐÃI HÔM NAY”贴条；要点 3–4 行越语；规格/正品/运费写清。<br/>
-        <span class="muted">Trang SP: nhãn ưu đãi nổi – bullet ngắn – rõ quy cách/chính hãng/ship.</span></li>
-      <li><b>中控节奏</b>：每 3–5 分钟循环弹三句模板（优惠/库存/倒计时）；评论区 15s 内必回；置顶当前货车。<br/>
-        <span class="muted">Điều phối: 3–5’ lặp 3 câu – rep CMT &lt;15s – ghim SP đang chốt.</span></li>
-      <li><b>主播演示</b>：做 30s 真实上脸/手背对比；口播“敏感肌可用/无香”；强提示“今晚下单有赠”。<br/>
-        <span class="muted">MC demo 30s – nói rõ dùng cho da nhạy cảm – nhấn mạnh quà hôm nay.</span></li>
-    </ol>
+  <h2>三、好处/注意｜Lợi ích/Lưu ý</h2>
+  <div class="card">
+    <ul>
+      <li>
+        <span class="cn">亮点：封面话术“ƯU ĐÃI HÔM NAY – MUA 1 TẶNG 5”带来高点击。</span>
+        <span class="vn">Điểm sáng: câu chữ bìa “ƯU ĐÃI HÔM NAY – MUA 1 TẶNG 5” tạo CTR cao.</span>
+      </li>
+      <li>
+        <span class="cn">注意：无关注转化（0%）；需在每 15 分钟进行一次“关注店铺领赠品”的口播。</span>
+        <span class="vn">Lưu ý: Chưa có chuyển đổi theo dõi (0%); cần nhắc “Follow shop nhận quà” mỗi 15 phút.</span>
+      </li>
+      <li>
+        <span class="cn">预热视频引流不足；建议开播前 3 小时发布 2 条挂车视频。</span>
+        <span class="vn">Video ngắn dẫn lưu chưa đủ; nên đăng 2 video gắn giỏ trước giờ live 3 giờ.</span>
+      </li>
+    </ul>
   </div>
 
-  <!-- 直播固定口播（保留不变） -->
-  <div class="section card">
-    <div class="title">直播固定口播｜Mẫu thoại cố định</div>
-    <ul class="list">
-      <li>“今晚买精华 <span class="em">tặng 5 mask</span>，数量有限，到点就关～ 点下方购
+  <h2>四、常见问题｜Câu hỏi thường gặp</h2>
+  <div class="card">
+    <ul>
+      <li>
+        <span class="cn">有点击没下单怎么办？—— 强化限时赠品与口播 CTA。</span>
+        <span class="vn">Có click không có đơn? — Tăng quà giới hạn & CTA bằng giọng nói.</span>
+      </li>
+      <li>
+        <span class="cn">观看停留短怎么办？—— 开头 30 秒直接上“对比+礼品展示”。</span>
+        <span class="vn">Thời gian xem ngắn? — 30s đầu cho “so sánh + trưng quà”.</span>
+      </li>
+      <li>
+        <span class="cn">评论区冷清怎么办？—— 置顶提问模板：Da bạn thuộc loại nào ạ?</span>
+        <span class="vn">Bình luận ít? — Ghim câu hỏi: Da bạn thuộc loại nào ạ?</span>
+      </li>
+    </ul>
+  </div>
+
+  <h2>五、排查步骤｜Các bước kiểm tra</h2>
+  <div class="card">
+    <ul>
+      <li>
+        <span class="cn">前台：封面与预热视频一致；标题含“今日优惠”。</span>
+        <span class="vn">Front: Ảnh bìa thống nhất với video nhá hàng; tiêu đề có “Ưu đãi hôm nay”.</span>
+      </li>
+      <li>
+        <span class="cn">主播：每 15 分钟重复“Bấm giỏ nhận quà – Có mã trong giỏ”。</span>
+        <span class="vn">MC: Lặp lại mỗi 15 phút “Bấm giỏ nhận quà – Có mã trong giỏ”.</span>
+      </li>
+      <li>
+        <span class="cn">后台：CTR &gt; 5% 但 CTOR &lt; 2% → 重写成交话术。</span>
+        <span class="vn">Back-end: CTR &gt; 5% nhưng CTOR &lt; 2% → viết lại kịch bản chốt đơn.</span>
+      </li>
+      <li>
+        <span class="cn">广告：用表现佳片段做 15–20s 视频，跑“宽兴趣 + nữ 25–34”。</span>
+        <span class="vn">Ads: Cắt đoạn tốt thành video 15–20s, chạy “sở thích rộng + nữ 25–34”.</span>
+      </li>
+    </ul>
+  </div>
+
+  <h2>明日行动清单｜Danh sách hành động ngày mai</h2>
+  <div class="card">
+    <ul>
+      <li>
+        <span class="cn">开播前 3 小时发布 2 条挂车视频；开播后 10 分钟内展示“买 1 tặng 5 mask”。</span>
+        <span class="vn">Trước live 3 giờ đăng 2 video gắn giỏ; trong 10 phút đầu cho “Mua 1 tặng 5 mask”.</span>
+      </li>
+      <li>
+        <span class="cn">评论区置顶：</span>
+        <span class="vn">Ghim bình luận:</span>
+        <span class="cn">🎁 MUA 1 TẶNG 1 + TẶNG 5 MASK CHO 50 ĐƠN ĐẦU</span>
+        <span class="vn">🎁 MUA 1 TẶNG 1 + TẶNG 5 MẶT NẠ CHO 50 ĐƠN ĐẦU</span>
+        <span class="cn">🎁 MÃ GIẢM GIÁ TRONG GIỎ – NHANH TAY NHA</span>
+        <span class="vn">🎁 Có mã giảm ngay trong giỏ – nhanh tay nhé</span>
+      </li>
+      <li>
+        <span class="cn">固定复盘时间：12:00 与 21:00；预算调整遵守 ±20% 原则。</span>
+        <span class="vn">Khung giờ tổng kết: 12:00 & 21:00; điều chỉnh ngân sách ±20%.</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <span class="cn">注：本页为移动端友好样式。</span>
+    <span class="vn">Ghi chú: Trang tối ưu cho di động, sẵn sàng chụp màn hình và gửi cho team.</span>
+  </div>
+</div>
+</body>
+</html>
